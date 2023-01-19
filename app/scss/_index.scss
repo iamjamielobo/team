@@ -284,6 +284,10 @@ html {
         padding-top: 65px;
         background-color: $white;
 
+        @media only screen and (max-width: 1024px) {
+            padding-top: 42px;
+        }
+
         .sec-title {
             font-weight: 700;
             font-size: 36px;
@@ -292,6 +296,12 @@ html {
             color: $black;
             text-align: center;
             margin-bottom: 64px;
+
+            @media only screen and (max-width: 1024px) {
+                font-size: 36px;
+                line-height: 44px;
+                margin-bottom: 50px;
+            }
         }
 
         .members-grid {
