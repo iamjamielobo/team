@@ -203,6 +203,35 @@ html {
             background: linear-gradient(180deg, #895D1F 0%, #DED6A1 64.58%, #C88925 93.75%);
             border-radius: 50%;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .circle-wrapper {
+                display: grid;
+                grid-template-columns: repeat(3, 25%);
+                grid-column-gap: 12.5%;
+                color: $white;
+                .circle-col {
+                    display: flex;
+                    flex-direction: column;
+                    .title {
+                        font-weight: 700;
+                        font-size: 60px;
+                        line-height: 73px;
+                        text-align: center;
+                        letter-spacing: -0.01em;
+                        text-transform: capitalize;
+                    }
+                    .text {
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 17px;
+                        text-align: center;
+                        letter-spacing: -0.01em;
+                        text-transform: capitalize;
+                    }
+                }
+            }
         }
         .wrapper {
             position: relative;
