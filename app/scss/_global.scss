@@ -1,0 +1,23 @@
+$black: #000000;
+$white: #ffffff;
+
+.relative {
+    position: relative;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+// Helpers
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.align-center {
+    text-align: center;
+}
