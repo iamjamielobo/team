@@ -20,15 +20,15 @@ html {
         }
 
         @media only screen and (max-width: 768px) {
-            padding: 0 40px;
+            padding: 0 30px;
         }
     }
 
     .fixed-nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
+        // position: fixed;
+        // top: 0;
+        // left: 0;
+        // width: 100%;
         background-color: rgba(255, 255, 255, 0.4);
         padding: 16px 0 17px;
         z-index: 100;
@@ -299,6 +299,18 @@ html {
             grid-template-columns: repeat(5, 15%);
             grid-column-gap: 6.25%;
 
+            @media only screen and (max-width: 1024px) {
+                grid-template-columns: repeat(4, 22%);
+                grid-column-gap: 4%;
+                align-items: center;
+                justify-content: center;
+            }
+
+            @media only screen and (max-width: 360px) {
+                grid-template-columns: repeat(3, 30%);
+                grid-column-gap: 5%;
+            }
+
             .members-block {
                 margin-bottom: 70px;
 
@@ -309,9 +321,20 @@ html {
                     text-transform: capitalize;
                     color: #000000;
                     margin-bottom: 15px;
+
+                    @media only screen and (max-width: 1024px) {
+                        display: none;
+                    }
                 }
 
-                .logo {}
+                .logo {
+                    img {
+                        @media only screen and (max-width: 1024px) {
+                            max-width: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
             }
         }
     }
