@@ -78,6 +78,10 @@ html {
             max-width: 935px;
             padding: 251px 0 70px;
 
+            @media only screen and (max-width: 1024px) {
+                padding: 200px 0 150px;
+            }
+
             h1 {
                 font-family: 'Poppins';
                 font-style: normal;
@@ -92,6 +96,11 @@ html {
                 background-clip: text;
                 z-index: 10;
                 position: relative;
+
+                @media only screen and (max-width: 1024px) {
+                    font-size: 43px;
+                    line-height: 38px;
+                }
             }
         }
         .hero-img-container {
@@ -144,6 +153,12 @@ html {
             letter-spacing: -0.01em;
             text-transform: capitalize;
             max-width: 900px;
+
+            @media only screen and (max-width: 1024px) {
+                font-size: 17px;
+                line-height: 26px;
+                max-width: 374px;
+            }
         }
 
         .steps {
@@ -152,9 +167,25 @@ html {
             grid-template-columns: repeat(3, 25%);
             grid-column-gap: 12.5%;
 
+            @media only screen and (max-width: 1024px) {
+                grid-template-columns: 1fr;
+            }
+
             .step {
+
+                @media only screen and (max-width: 1024px) {
+                    margin-bottom: 60px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
                 .icon {
                     min-height: 122px;
+                    margin-bottom: 50px;
+
+                    @media only screen and (max-width: 1024px) {
+                        margin-bottom: 35px;
+                    }
                 }
 
                 .text {
@@ -166,6 +197,13 @@ html {
                     text-align: center;
                     letter-spacing: -0.01em;
                     color: #E5E3F5;
+                    margin: 0 auto;
+
+                    @media only screen and (max-width: 1024px) {
+                        font-size: 24px;
+                        line-height: 29px;
+                        margin: 0 auto;
+                    }
                 }
             }
         }
@@ -179,6 +217,14 @@ html {
             color: #E5E3F5;
             padding-bottom: 255px;
             position: relative;
+
+            @media only screen and (max-width: 1024px) {
+                font-size: 17px;
+                line-height: 30px;
+                max-width: 340px;
+                margin: 0 auto;
+                padding-bottom: 0;
+            }
         }
     }
 
@@ -187,6 +233,11 @@ html {
         height: 760px;
         background-color: #EFE3E5;
         padding-top: 70px;
+
+        @media only screen and (max-width: 1024px) {
+            height: auto;
+            padding: 70px 0 100px;
+        }
         .bg-img-1 {
             position: absolute;
             bottom: 0;
@@ -194,6 +245,10 @@ html {
             z-index: 1;
             img {
                 width: 100%;
+
+                @media only screen and (max-width: 1024px) {
+                    width: 120%;
+                }
             }
         }
         .circle {
@@ -206,14 +261,35 @@ html {
             display: flex;
             align-items: center;
             justify-content: center;
+
+            @media only screen and (max-width: 1024px) {
+                max-width: 560px;
+                width: 80vw;
+                margin: 0 auto;
+                height: 80vw;
+                max-height: 560px;
+            }
             .circle-wrapper {
                 display: grid;
                 grid-template-columns: repeat(3, 25%);
                 grid-column-gap: 12.5%;
                 color: $white;
+
+                @media only screen and (max-width: 1024px) {
+                    grid-template-columns: 1fr;
+                }
                 .circle-col {
                     display: flex;
                     flex-direction: column;
+
+                    @media only screen and (max-width: 1024px) {
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 30px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
                     .title {
                         font-weight: 700;
                         font-size: 60px;
@@ -221,6 +297,11 @@ html {
                         text-align: center;
                         letter-spacing: -0.01em;
                         text-transform: capitalize;
+
+                        @media only screen and (max-width: 1024px) {
+                            font-size: 32px;
+                            line-height: 1;
+                        }
                     }
                     .text {
                         font-weight: 700;
@@ -229,6 +310,11 @@ html {
                         text-align: center;
                         letter-spacing: -0.01em;
                         text-transform: capitalize;
+
+                        @media only screen and (max-width: 1024px) {
+                            font-size: 12px;
+                            line-height: 1;
+                        }
                     }
                 }
             }
@@ -240,6 +326,10 @@ html {
                 border-radius: 50%;
                 overflow: hidden;
                 z-index: 2;
+
+                @media only screen and (max-width: 1024px) {
+                    display: none;
+                }
             }
             .dot1 {
                 top: 00px;
@@ -354,6 +444,9 @@ html {
         background-image: url('../../img/testimonial_1x.webp');
         // background-attachment:fixed;
         background-size: cover;
+        @media only screen and (max-width: 1024px) {
+            padding: 15px 0 0px;
+        }
         .wrapper {
             display: flex;
             justify-content: flex-end;
@@ -361,8 +454,21 @@ html {
         .test-grid {
             display: flex;
             gap: 35px;
+            @media only screen and (max-width: 1024px) {
+                display: block;
+                text-align: center;
+            }
             .img {
-
+                @media only screen and (max-width: 1024px) {
+                    margin-top: 35px;
+                }
+                img {
+                    @media only screen and (max-width: 1024px) {
+                        width: 100%;
+                        max-width: 354px;
+                        margin: 0 auto
+                    }
+                }
             }
             .quotes {
                 color: $white;
@@ -385,6 +491,10 @@ html {
                     text-align: right;
                     letter-spacing: -0.04em;
                     font-family: 'Archivo';
+                    @media only screen and (max-width: 1024px) {
+                        font-size: 32.2829px;
+                        line-height: 35px;
+                    }
                 }
                 .name {
                     margin-top: 30px;
@@ -392,12 +502,18 @@ html {
                     font-size: 19.6113px;
                     line-height: 30px;
                     text-align: right;
+                    @media only screen and (max-width: 1024px) {
+                        font-size: 20px;
+                    }
                 }
                 .company {
                     font-weight: 700;
                     font-size: 18.3856px;
                     line-height: normal;
                     text-align: right;
+                    @media only screen and (max-width: 1024px) {
+                        font-size: 18px;
+                    }
                 }
             }
         }
@@ -410,12 +526,22 @@ html {
         background-color: #FFEDD4;
         overflow: hidden;
         position: relative;
+
+        @media only screen and (max-width: 1024px) {
+            background: none;
+            background-color: #E5E3F5;
+            padding: 50px 0;
+        }
         .pattern {
             position: absolute;
             top: 0;
             right: 0;
             width: 50%;
             height: 100%;
+
+            @media only screen and (max-width: 1024px) {
+                display: none;
+            }
             img {
                 display: block;
                 width: 100%;
@@ -423,6 +549,10 @@ html {
         }
         .contact-form {
             max-width: 583px;
+
+            @media only screen and (max-width: 1024px) {
+                display: none;
+            }
             .contact-wrapper {
                 .sec-title {
                     font-weight: 700;
@@ -476,12 +606,30 @@ html {
         .footer-wrapper {
             display: flex;
             flex-direction: row;
+
+            @media only screen and (max-width: 1024px) {
+                flex-direction: column;
+                align-items: center;
+            }
             .social-links {
                 margin-left: auto;
+
+                @media only screen and (max-width: 1024px) {
+                    margin: 30px 0 0;
+                }
                 .links {
                     display: flex;
                     flex-direction: row;
                     gap: 25px;
+                    align-items: center;
+                    justify-content: center;
+                    li {
+                        img {
+                            @media only screen and (max-width: 1024px) {
+                                width: 25px;
+                            }
+                        }
+                    }
                 }
             }
             .mail-link {
