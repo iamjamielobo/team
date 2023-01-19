@@ -4,7 +4,7 @@ html {
 
 .body-container {
     overflow: hidden;
-    padding-top: 67px;
+    // padding-top: 67px;
     .wrapper {
         max-width: 1200px;
         margin: 0 auto;
@@ -31,6 +31,7 @@ html {
         width: 100%;
         background-color: rgba(255, 255, 255, 0.4);
         padding: 16px 0 17px;
+        z-index: 100;
 
         .wrapper {
             display: flex;
@@ -68,9 +69,10 @@ html {
     }
 
     .hero {
-        background-image: url('../../img/Homepage_bg.webp');
+        // background-image: url('../../img/Homepage_bg.webp');
         // background-attachment:fixed;
         background-size: cover;
+        position: relative;
         .h1-wrapper {
             max-width: 935px;
             padding: 251px 0 70px;
@@ -87,6 +89,31 @@ html {
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
+                z-index: 10;
+                position: relative;
+            }
+        }
+        .hero-img-container {
+            position: relative;
+            .bg-img-1 {
+                position: absolute;
+                top: 0px;
+                right: 0;
+                width: 100%;
+                z-index: 1;
+                img {
+                    width: 100%;
+                }
+            }
+            .bg-img-2 {
+                position: absolute;
+                top: 0px;
+                right: 0;
+                width: 30%;
+                z-index: 2;
+                img {
+                    width: 100%;
+                }
             }
         }
     }
@@ -95,6 +122,18 @@ html {
         color: $white;
         text-align: center;
         padding-bottom: 130px;
+        position: relative;
+        z-index: 10;
+
+        .bg-img-1 {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
 
         .abt-text {
             margin: 21px auto 82px;
@@ -137,15 +176,8 @@ html {
             letter-spacing: 0.39em;
             text-transform: uppercase;
             color: #E5E3F5;
-            padding-bottom: 274px;
+            padding-bottom: 255px;
             position: relative;
-
-            .bg-img {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100vw;
-            }
         }
     }
 
