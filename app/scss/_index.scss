@@ -184,8 +184,9 @@ html {
 
     .stats {
         position: relative;
-        height: 660px;
+        height: 760px;
         background-color: #EFE3E5;
+        padding-top: 70px;
         .bg-img-1 {
             position: absolute;
             bottom: 0;
@@ -193,6 +194,14 @@ html {
             img {
                 width: 100%;
             }
+        }
+        .circle {
+            margin: 0 auto;
+            width: 560px;
+            height: 560px;
+            background: linear-gradient(180deg, #895D1F 0%, #DED6A1 64.58%, #C88925 93.75%);
+            border-radius: 50%;
+            overflow: hidden;
         }
     }
 
