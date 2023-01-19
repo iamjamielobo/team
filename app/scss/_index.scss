@@ -203,6 +203,41 @@ html {
             border-radius: 50%;
             overflow: hidden;
         }
+        .wrapper {
+            position: relative;
+            .dot1, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8, .dot9 {
+                position: absolute;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            .dot1 {
+                top: 10px;
+            }
+            .dot2 {
+                top: 50px;
+            }
+            .dot3 {
+                top: 100px;
+            }
+            .dot4 {
+                top: 150px;
+            }
+            .dot5 {
+
+            }
+            .dot6 {
+
+            }
+            .dot7 {
+
+            }
+            .dot8 {
+
+            }
+            .dot9 {
+
+            }
+        }
     }
 
     .our-members {
