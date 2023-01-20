@@ -452,46 +452,84 @@ html {
                 border-radius: 50%;
                 overflow: hidden;
                 z-index: 2;
-
-                @media only screen and (max-width: 1024px) {
-                    display: none;
+                img {
+                    @media only screen and (max-width: 1024px) {
+                        width: 42px;
+                    }
                 }
             }
             .dot1 {
                 top: 00px;
-                right: 25%
+                right: 25%;
+                @media only screen and (max-width: 1024px) {
+                    top: -13%;
+                    right: 25%;
+                }
             }
             .dot2 {
                 top: 100px;
-                right: 0%
+                right: 0%;
+                @media only screen and (max-width: 1024px) {
+                    top: 10%;
+                    right: 5%;
+                }
             }
             .dot3 {
                 top: 250px;
-                right: 15%
+                right: 15%;
+                @media only screen and (max-width: 1024px) {
+                    top: 92%;
+                    right: 6%;
+                }
             }
             .dot4 {
                 top: 400px;
-                right: 3%
+                right: 3%;
+                @media only screen and (max-width: 1024px) {
+                    top: 63%;
+                    right: 3%;
+                }
             }
             .dot5 {
                 top: 00px;
-                left: 25%
+                left: 25%;
+                @media only screen and (max-width: 1024px) {
+                    top: -11%;
+                    left: 15%;
+                }
             }
             .dot6 {
                 top: 100px;
-                left: 8%
+                left: 8%;
+                @media only screen and (max-width: 1024px) {
+                    top: 71%;
+                    left: 5%;
+                }
             }
             .dot7 {
                 top: 200px;
-                left: 15%
+                left: 15%;
+                @media only screen and (max-width: 1024px) {
+                    top: 11%;
+                    left: 15%;
+                }
             }
             .dot8 {
                 top: 300px;
-                left: 0%
+                left: 0%;
+                @media only screen and (max-width: 1024px) {
+                    top: 44%;
+                    left: 8%;
+                }
             }
             .dot9 {
                 top: 500px;
-                left: 20%
+                left: 20%;
+                @media only screen and (max-width: 1024px) {
+                    top: 34%;
+                    right: 0%;
+                    left: auto;
+                }
             }
         }
     }
