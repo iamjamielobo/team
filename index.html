@@ -14,24 +14,47 @@
     <!-- <meta property="og:title" content="Backing founders like they deserve, as peers." />
     <meta property="og:description" content="Our aim is to back amazingly ambitious founders and help them as peers in their 0-1 journey." />
     <meta property="og:image" content="https://peercheque.com/img/seo.png" /> -->
+    <script>history.scrollRestoration = "manual"</script>
 </head>
 
 <body>
     <div class="body-container">
         <div class="fixed-nav">
-            <div class="wrapper">
+            <div class="wrapper nav-desktop">
                 <div class="logo">
                     <img src="img/logo-nav.svg" alt="">
                 </div>
                 <div class="nav-list">
-                    <!-- <nav>
+                    <nav>
                         <ul>
-                            <li>About Us</li>
-                            <li>What we do</li>
-                            <li>Our Members</li>
-                            <li>Contact Us</li>
+                            <li data-scroll="about">About Us</li>
+                            <li data-scroll="what">What we do</li>
+                            <li data-scroll="members">Our Members</li>
+                            <li data-scroll="contact">Contact Us</li>
                         </ul>
-                    </nav> -->
+                    </nav>
+                </div>
+            </div>
+            <div class="nav-mobile">
+                <div class="logo-sec">
+                    <img src="img/logo-nav.svg" alt="">
+                </div>
+                <div class="hamburger-wrapper">
+                    <div class="hamburger" id="hamburger-1">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="nav-mobile-list">
+                    <nav>
+                        <ul>
+                            <li data-scroll="about">About Us</li>
+                            <li data-scroll="what">What we do</li>
+                            <li data-scroll="members">Our Members</li>
+                            <!-- <li><span class="btn">Contact Us</span></li> -->
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -55,7 +78,7 @@
                 </div>
             </div>
         </div>
-        <div class="about-sec">
+        <div class="about-sec" id="about">
             <div class="wrapper">
                 <div class="bg-img-1">
                     <img src="img/aboutus2_bg-2.webp" alt="">
@@ -69,7 +92,7 @@
                 <div class="abt-logos">
                     <img src="img/about.svg" alt="">
                 </div>
-                <div class="steps">
+                <div class="steps" id="what">
                     <div class="step">
                         <div class="icon">
                             <img src="img/step-1.svg" alt="">
@@ -132,7 +155,7 @@
                 </div>
             </div>
         </div>
-        <div class="our-members">
+        <div class="our-members" id="members">
             <div class="wrapper">
                 <div class="sec-title">Our Members</div>
                 <div class="members-grid">
@@ -316,7 +339,7 @@
                 </div>
             </div>
         </div>
-        <div class="contact-us">
+        <div class="contact-us" id="contact">
             <div class="pattern">
                 <img src="img/pattern_contactus.png" alt="">
             </div>
@@ -382,7 +405,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-    <script src="dist/script.js?1"></script>
+    <script src="dist/script.js?2"></script>
 </body>
 
 </html>

@@ -1,2 +1,2 @@
-$(document).ready((function(){}));
+$(document).ready((function(){window.scrollTo(0,0),$(".hamburger").click((function(){$(this).toggleClass("_active"),$(".nav-mobile-list").toggleClass("_active")})),$("nav li").click((function(l){l.preventDefault();var o=$(this).data("scroll");$(".hamburger").toggleClass("_active"),$(".nav-mobile-list").toggleClass("_active"),$("html, body").animate({scrollTop:$("#"+o).offset().top},1e3)}))})),window.onunload=function(){window.scrollTo(0,0)};
 //# sourceMappingURL=script.js.map

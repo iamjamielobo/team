@@ -1,5 +1,6 @@
 html {
     background-color: #10183C;
+    scroll-behavior: smooth;
 }
 
 .body-container {
@@ -37,6 +38,116 @@ html {
             display: flex;
             flex-direction: row;
             justify-content: center;
+            &.nav-desktop {
+                @media only screen and (max-width: 1024px) {
+                    display: none;
+                }
+            }
+        }
+
+        .nav-mobile {
+            display: none;
+            z-index: 100;
+
+            @media only screen and (max-width: 1024px) {
+                display: flex;
+                padding: 15px 40px;
+                background-color: rgba(255, 255, 255, 0.8);
+                align-items: center;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+            }
+
+            .logo-sec {
+                z-index: 100;
+
+                img {
+                    width: 110px;
+                }
+            }
+
+            .hamburger-wrapper {
+                margin-left: auto;
+                z-index: 100;
+
+                .hamburger .line {
+                    width: 25px;
+                    height: 2px;
+                    background-color: #0A2296;
+                    display: block;
+                    margin: 6px auto;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                .hamburger:hover {
+                    cursor: pointer;
+                }
+
+                /* ONE */
+
+                #hamburger-1._active .line:nth-child(2) {
+                    opacity: 0;
+                }
+
+                #hamburger-1._active .line:nth-child(1) {
+                    transform: translateY(3px) rotate(45deg);
+                }
+
+                #hamburger-1._active .line:nth-child(3) {
+                    transform: translateY(-13px) rotate(-45deg);
+                }
+            }
+
+            .nav-mobile-list {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 300px;
+                height: 100vh;
+                z-index: 20;
+                background-color: rgba(255, 255, 255, 1);
+                transform: translateX(300px);
+                transition: transform 0.5s ease;
+                padding: 150px 10px 150px 30px;
+
+                nav {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    span {
+                        margin-bottom: 30px;
+                        text-align: center;
+                        padding: 0 5px 5px;
+                    }
+
+                    .btn {
+                        background-color: #10183C;
+                        border-radius: 30px;
+                        padding: 14px 35px 16px;
+                        line-height: 40px;
+                        color: $white;
+                    }
+                    ul li {
+                        font-family: 'Poppins';
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 27px;
+                        letter-spacing: -0.01em;
+                        color: #10183C;
+                        text-align: center;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                &._active {
+                    transform: translateX(00px);
+                    transition: transform 0.5s ease;
+                }
+            }
         }
 
         .logo {}
@@ -76,7 +187,7 @@ html {
         position: relative;
         .h1-wrapper {
             max-width: 935px;
-            padding: 251px 0 70px;
+            padding: 251px 0 0px;
 
             @media only screen and (max-width: 1024px) {
                 padding: 200px 0 150px;
@@ -134,6 +245,7 @@ html {
         padding-bottom: 130px;
         position: relative;
         z-index: 10;
+        padding-top: 70px;
 
         .bg-img-1 {
             position: absolute;
@@ -162,7 +274,7 @@ html {
         }
 
         .steps {
-            margin: 130px 0 116px;
+            padding: 130px 0 116px;
             display: grid;
             grid-template-columns: repeat(3, 25%);
             grid-column-gap: 12.5%;

@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    window.scrollTo(0,0);
+
     // window.addEventListener('scroll', throttle(parallax, 14));
 
     // function throttle(fn, wait) {
@@ -54,10 +56,24 @@ $(document).ready(function () {
     //         }
     //     })
 
-    //     $(".hamburger").click(function () {
-    //         $(this).toggleClass("_active");
-    //         $('.nav-mobile-list').toggleClass('_active');
-    //     });
+        $(".hamburger").click(function () {
+            $(this).toggleClass("_active");
+            $('.nav-mobile-list').toggleClass('_active');
+        });
+
+        $('nav li').click(function (e) {
+            e.preventDefault();
+
+            var $this = $(this);
+            var secName = $this.data('scroll');
+
+            $(".hamburger").toggleClass("_active");
+            $('.nav-mobile-list').toggleClass('_active');
+
+            $('html, body').animate({
+                scrollTop: $("#" + secName).offset().top
+            }, 1000);
+        })
 
     //     $(".tab-list .tabs .tab").click(function () {
     //         var $this = $(this);
@@ -193,3 +209,5 @@ $(document).ready(function () {
 //         /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 //     );
 // };
+
+window.onunload = function(){ window.scrollTo(0,0); }
