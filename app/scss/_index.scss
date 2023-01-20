@@ -721,6 +721,8 @@ html {
         }
         .contact-form {
             max-width: 583px;
+            position: relative;
+            z-index: 10;
 
             @media only screen and (max-width: 1024px) {
                 display: none;
