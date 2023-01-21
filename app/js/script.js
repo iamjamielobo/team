@@ -1,30 +1,67 @@
+function initSlick() {
+
+    $(".testimonials").slick({
+        autoplaySpeed: 5000,
+        speed: 3000,
+        // cssEase: 'linear',
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        pauseOnHover: false,
+        focusOnSelect: false,
+        // nextArrow: `<img class='next-arrow' src="img/carousel/right.png">`,
+        // prevArrow: `<img class='prev-arrow' src="img/carousel/left.png">`
+        nextArrow: null,
+        prevArrow: null,
+        // responsive: [
+        //     {
+        //         breakpoint: 1380,
+        //         settings: {
+        //             slidesToShow: 2,
+        //             speed: 7000,
+        //             swipe: false,
+        //             pauseOnHover: false,
+        //             focusOnSelect: false
+        //         }
+        //     }, {
+        //         breakpoint: 1024,
+        //         settings: {
+        //             slidesToShow: 2,
+        //             speed: 7000,
+        //             swipe: false,
+        //             pauseOnHover: false,
+        //             focusOnSelect: false,
+        //         }
+        //     }, {
+
+        //         breakpoint: 600,
+        //         settings: {
+        //             slidesToShow: 1,
+        //             speed: 7000,
+        //             swipe: false,
+        //             pauseOnHover: false,
+        //             focusOnSelect: false,
+        //         }
+
+        //     }
+        // ]
+    });
+}
+
 $(document).ready(function () {
 
-    window.scrollTo(0,0);
+    initSlick();
 
-    // window.addEventListener('scroll', throttle(parallax, 14));
+    $('.js-contact-open').click(function() {
+        $('body').addClass('_fixed');
+        $('.contact-form-modal').removeClass('_hidden');
+    })
 
-    // function throttle(fn, wait) {
-    //     var time = Date.now();
-    //     return function () {
-    //         if ((time + wait - Date.now()) < 0) {
-    //             fn();
-    //             time = Date.now();
-    //         }
-    //     }
-    // };
-
-    // function parallax() {
-    //     var scrolled = window.pageYOffset;
-    //     var parallax = document.querySelector(".parallax");
-    //     // You can adjust the 0.4 to change the speed
-    //     var coords = (scrolled * .4) + 'px'
-    //     parallax.style.transform = 'translateY(' + coords + ')';
-    // };
-
-    //     if (location.protocol !== 'https:') {
-    //         location.replace(`https:${location.href.substring(location.protocol.length)}`);
-    //     }
+    $('.cross').click(function() {
+        $('body').removeClass('_fixed');
+        $('.contact-form-modal').addClass('_hidden');
+    })
 
     //     if ( emailjs ) {
     //         emailjs.init("HmmtKITJrAmisKnCp");

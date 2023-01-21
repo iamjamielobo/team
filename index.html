@@ -20,10 +20,61 @@
     <script>
         new WOW().init();
     </script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 
 <body>
     <div class="body-container">
+        <div class="contact-form-modal _hidden">
+            <div class="contact-wrapper">
+                <div class="cross"><img src="img/cross.svg" alt=""></div>
+                <div class="wrapper">
+                    <div class="contact-form">
+                        <div class="contact-form-wrapper">
+                            <div class="sec-title">Contact Us</div>
+                            <div class="sec-text">
+                                We are keen to partner with you to further scale the Mumbai eco-system. Do share your ideas and we will get back to you.
+                            </div>
+                            <div class="form">
+                                <form action="">
+                                    <div class="form-grid">
+                                        <div class="form-field">
+                                            <!-- <p class="form-label">Your First</p> -->
+                                            <input id='js-fname' placeholder="First Name" type="text" tabindex="1" required>
+                                            <!-- <p class="error-msg">This is a required field.</p> -->
+                                        </div>
+                                        <div class="form-field">
+                                            <!-- <p class="form-label">Last Name</p> -->
+                                            <input id='js-lname' placeholder="Last Name" type="text" tabindex="2" required>
+                                            <!-- <p class="error-msg">This is a required field.</p> -->
+                                        </div>
+                                    </div>
+                                    <div class="form-field">
+                                        <!-- <p class="form-label">Your Email</p> -->
+                                        <input id='js-email' placeholder="Company Email ID" type="text" tabindex="3" required>
+                                        <!-- <p class="error-msg">This is a required field.</p> -->
+                                    </div>
+                                    <div class="form-field">
+                                        <!-- <p class="form-label">Your Email</p> -->
+                                        <textarea rows="4" id='js-message' placeholder="Message" type="text" tabindex="4" required></textarea>
+                                        <!-- <p class="error-msg">This is a required field.</p> -->
+                                    </div>
+                                    <div class="form-field">
+                                        <button type='submit' href="#" class="submit-btn js-form-submit">
+                                            Submit
+                                        </button>
+                                    </div>
+                                    <!-- <div class="form-field">
+                                        <p class="success-msg">You message has been delivered. We will reach out to you shortly.</p>
+                                    </div> -->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="fixed-nav">
             <div class="wrapper nav-desktop">
                 <div class="logo">
@@ -35,7 +86,7 @@
                             <li data-scroll="about">About Us</li>
                             <li data-scroll="what">What we do</li>
                             <li data-scroll="members">Our Members</li>
-                            <li data-scroll="contact">Contact Us</li>
+                            <li class="js-contact-open" data-scroll="contact">Contact Us</li>
                         </ul>
                     </nav>
                 </div>
@@ -68,35 +119,36 @@
                 <h1>Tech Entrepreneurs association of Mumbai</h1>
             </div>
         </header> -->
-        <div class="hero">
+        <div class="hero full-stretch">
             <div class="hero-img-container">
                 <div class="bg-img-1">
                     <img src="img/Homepage_bg-2.webp" alt="">
                 </div>
-                <div class="bg-img-2">
+                <!-- <div class="bg-img-2">
                     <img src="img/pattern_homepage.png" alt="">
-                </div>
+                </div> -->
                 <div class="wrapper">
                     <div class="h1-wrapper">
-                        <h1 class="">Tech Entrepreneurs association of Mumbai</h1>
+                        <h1 class="wow fadeInUp">Tech Entrepreneurs association of Mumbai</h1>
                     </div>
+                    <div class="h1-sub-text wow fadeInUp">is a non-profit, independent industry body formed with the mission of advancing the tech startup ecosystem of Mumbai. We represent the city's leading technology companies with a combined market valuation of more than $50 billion.</div>
                 </div>
             </div>
         </div>
-        <div class="about-sec" id="about">
+        <div class="about-sec full-stretch" id="about">
             <div class="wrapper">
                 <div class="bg-img-1">
                     <img src="img/aboutus2_bg-2.webp" alt="">
                 </div>
-                <div class="logo-white">
+                <!-- <div class="logo-white">
                     <img src="img/logo-white.svg" alt="">
                 </div>
                 <div class="abt-text ">
                     is a non-profit, independent industry body formed with the mission of advancing the tech startup ecosystem of Mumbai. We represent the city's leading technology companies with a combined market valuation of more than $50 billion.
-                </div>
-                <div class="abt-logos">
+                </div> -->
+                <!-- <div class="abt-logos">
                     <img src="img/about.svg" alt="">
-                </div>
+                </div> -->
                 <div class="steps" id="what">
                     <div class="step">
                         <div class="icon">
@@ -128,7 +180,7 @@
                 </div>
             </div>
         </div>
-        <div class="stats">
+        <div class="stats full-stretch">
             <div class="bg-img-1">
                 <img src="img/mumbai_bg2.png" alt="">
             </div>
@@ -331,16 +383,42 @@
                 </div>
             </div>
         </div>
-        <div class="testimonial">
+        <div class="testimonial-sec">
             <div class="wrapper">
-                <div class="test-grid">
-                    <div class="quotes">
-                        <div class="icon"><img src="img/quote.png" alt=""></div>
-                        <div class="text">Lorem ipsum dolor sit amet, cons ectetur adipiscing elit.</div>
-                        <div class="name">Dhruvil Sanghvi</div>
-                        <div class="company">LogiNext</div>
+                <div class="testimonials">
+                    <div class="test-grid">
+                        <div class="slider-wrapper">
+                            <div class="quotes">
+                                <div class="icon"><img src="img/quote.png" alt=""></div>
+                                <div class="text">Lorem ipsum dolor sit amet, cons ectetur adipiscing elit.</div>
+                                <div class="name">Dhruvil Sanghvi</div>
+                                <div class="company">LogiNext</div>
+                            </div>
+                            <div class="img"><img src="img/testi.png" alt=""></div>
+                        </div>
                     </div>
-                    <div class="img"><img src="img/testi.png" alt=""></div>
+                    <div class="test-grid">
+                        <div class="slider-wrapper">
+                            <div class="quotes">
+                                <div class="icon"><img src="img/quote.png" alt=""></div>
+                                <div class="text">Lorem ipsum dolor sit amet, cons ectetur adipiscing elit.</div>
+                                <div class="name">Dhruvil Sanghvi</div>
+                                <div class="company">LogiNext</div>
+                            </div>
+                            <div class="img"><img src="img/testi.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="test-grid">
+                        <div class="slider-wrapper">
+                            <div class="quotes">
+                                <div class="icon"><img src="img/quote.png" alt=""></div>
+                                <div class="text">Lorem ipsum dolor sit amet, cons ectetur adipiscing elit.</div>
+                                <div class="name">Dhruvil Sanghvi</div>
+                                <div class="company">LogiNext</div>
+                            </div>
+                            <div class="img"><img src="img/testi.png" alt=""></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -363,14 +441,17 @@
                             </ul>
                         </div>
                     </div>
+                    <div class="with-love">
+                        Made with <span class="heartbeat"><img src="img/heart.svg" alt=""></span> in Bombay
+                    </div>
                 </footer>
             </div>
         </div>
     </div>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script> -->
     <script src="dist/script.js?2"></script>
 </body>
 
