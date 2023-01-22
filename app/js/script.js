@@ -4,6 +4,7 @@ function initSlick() {
         autoplaySpeed: 5000,
         speed: 3000,
         // cssEase: 'linear',
+        dots: true,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -108,8 +109,9 @@ $(document).ready(function () {
             $('.nav-mobile-list').toggleClass('_active');
 
             $('html, body').animate({
-                scrollTop: $("#" + secName).offset().top
-            }, 1000);
+                scrollTop: $("#" + secName).offset().top,
+                easing: "linear"
+            }, 700);
         })
 
     //     $(".tab-list .tabs .tab").click(function () {
