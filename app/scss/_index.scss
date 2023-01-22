@@ -219,13 +219,17 @@ html {
         .banner-ad {
             position: absolute;
             width: 359px;
-            height: 140px;
+            height: 179px;
             background: #FFFFFF;
             border: 1px solid rgba(0, 0, 0, 0.35);
             border-radius: 10px;
             top: 80px;
             right: 0;
             z-index: 10;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
         }
         .hero-wrapper {
             display: flex;
@@ -694,10 +698,10 @@ html {
                     opacity: 1;
                 }
                 li {
-                    margin: 0 25px;
+                    margin: 0 12px;
                 }
                 li button:before {
-                    width: 67px;
+                    width: 37px;
                     height: 3px;
                     background: $white;
                     opacity: 0.3;
@@ -734,6 +738,7 @@ html {
                     display: flex;
                     justify-content: center;
                     flex-direction: column;
+                    margin-right: 50px;
                     .icon {
                         font-family: 'Press Start 2P';
                         font-weight: 400;
@@ -744,8 +749,8 @@ html {
                     }
                     .text {
                         font-weight: 400;
-                        font-size: 53.2917px;
-                        line-height: 58px;
+                        font-size: 24px;
+                        line-height: 30px;
                         text-align: right;
                         letter-spacing: -0.04em;
                         font-family: 'Archivo';
@@ -853,6 +858,7 @@ html {
         }
         .with-love {
             text-align: right;
+            margin-top: 28px;
             .heartbeat {
                 img {
                     animation: beat .5s infinite alternate;
