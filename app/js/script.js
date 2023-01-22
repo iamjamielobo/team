@@ -2,8 +2,12 @@ function initSlick() {
 
     $(".testimonials").slick({
         autoplaySpeed: 5000,
-        speed: 3000,
+        // speed: 3000,
         // cssEase: 'linear',
+        fade: true,
+        speed: 500,
+        infinite: true,
+        cssEase: 'ease-in-out',
         dots: true,
         infinite: true,
         slidesToShow: 1,

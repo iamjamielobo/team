@@ -703,6 +703,10 @@ html {
                     opacity: 0.3;
                     overflow: hidden;
                 }
+                li button {
+                    width: 67px;
+                    height: 3px;
+                }
             }
             .test-grid {
                 display: flex;
