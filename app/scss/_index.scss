@@ -675,6 +675,23 @@ html {
                 align-items: center;
                 justify-content: center;
             }
+            .slick-dots {
+                bottom: -75px;
+                text-align: left;
+                .slick-active button::before {
+                    opacity: 1;
+                }
+                li {
+                    margin: 0 25px;
+                }
+                li button:before {
+                    width: 67px;
+                    height: 3px;
+                    background: $white;
+                    opacity: 0.3;
+                    overflow: hidden;
+                }
+            }
             .test-grid {
                 display: flex;
                 align-items: center;
