@@ -214,6 +214,18 @@ html {
             flex-direction: column;
             width: 100vw;
             height: 100vh;
+            position: relative;
+        }
+        .banner-ad {
+            position: absolute;
+            width: 359px;
+            height: 140px;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.35);
+            border-radius: 10px;
+            top: 80px;
+            right: 0;
+            z-index: 10;
         }
         .hero-wrapper {
             display: flex;
