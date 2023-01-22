@@ -789,7 +789,7 @@ html {
         // background-image: url('../../img/contactus-1.webp');
         background-size: cover;
         background-position: center;
-        padding: 47px 0 50px;
+        padding: 55px 0 58px;
         background-color: #E5E3F5;
         overflow: hidden;
         position: relative;
@@ -823,6 +823,7 @@ html {
             }
             .logo-container {
                 .logo {
+                    margin-bottom: 50px;
                     img {
                         width: 150px;
                     }
@@ -837,7 +838,7 @@ html {
             .social-links {
                 margin-left: auto;
                 display: flex;
-                justify-content: center;
+                // justify-content: center;
                 flex-direction: column;
                 @media only screen and (max-width: 1024px) {
                     margin: 30px 0 0;
@@ -861,7 +862,7 @@ html {
         }
         .with-love {
             text-align: right;
-            margin-top: 28px;
+            margin-top: 63px;
             .heartbeat {
                 img {
                     animation: beat .5s infinite alternate;
