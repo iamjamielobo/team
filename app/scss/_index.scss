@@ -429,9 +429,9 @@ html {
 
     .stats {
         position: relative;
-        // height: 760px;
+        height: 860px;
         background-color: #EFE3E5;
-        padding-top: 70px;
+        padding-top: 175px;
 
         @media only screen and (max-width: 1024px) {
             height: auto;
@@ -459,7 +459,7 @@ html {
             border-radius: 50%;
             overflow: hidden;
             display: flex;
-            align-items: center;
+            // align-items: center;
             justify-content: center;
 
             @media only screen and (max-width: 1024px) {
@@ -474,6 +474,7 @@ html {
                 grid-template-columns: repeat(3, 25%);
                 grid-column-gap: 12.5%;
                 color: $white;
+                margin-top: 150px;
 
                 @media only screen and (max-width: 1024px) {
                     grid-template-columns: 1fr;
@@ -524,10 +525,10 @@ html {
         }
         .wrapper {
             position: relative;
-            .dot1, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8, .dot9 {
+            .dot1, .dot2, .dot3, .dot4, .dot5, .dot6, .dot7, .dot8, .dot9, .dot10, .dot11, .dot12 {
                 position: absolute;
-                border-radius: 50%;
-                overflow: hidden;
+                // border-radius: 50%;
+                // overflow: hidden;
                 z-index: 2;
                 img {
                     @media only screen and (max-width: 1024px) {
@@ -536,72 +537,99 @@ html {
                 }
             }
             .dot1 {
-                top: 00px;
-                right: 25%;
+                bottom: 5%;
+                left: 0;
                 @media only screen and (max-width: 1024px) {
                     top: -9%;
                     right: 25%;
                 }
             }
             .dot2 {
-                top: 100px;
-                right: 0%;
+                bottom: 20%;
+                left: 10%;
                 @media only screen and (max-width: 1024px) {
                     top: 10%;
                     right: 5%;
                 }
             }
             .dot3 {
-                top: 250px;
-                right: 15%;
+                top: 40%;
+                left: 2%;
                 @media only screen and (max-width: 1024px) {
                     top: 92%;
                     right: 6%;
                 }
             }
             .dot4 {
-                top: 400px;
-                right: 3%;
+                top: 20%;
+                left: 15%;
                 @media only screen and (max-width: 1024px) {
                     top: 63%;
                     right: 3%;
                 }
             }
             .dot5 {
-                top: 00px;
-                left: 25%;
+                top: 5%;
+                left: 0%;
                 @media only screen and (max-width: 1024px) {
                     top: -11%;
                     left: 15%;
                 }
             }
             .dot6 {
-                top: 100px;
-                left: 8%;
+                top: -5%;
+                left: 30%;
                 @media only screen and (max-width: 1024px) {
                     top: 71%;
                     left: 5%;
                 }
             }
             .dot7 {
-                top: 200px;
-                left: 15%;
+                top: -15%;
+                right: 40%;
                 @media only screen and (max-width: 1024px) {
                     top: 11%;
                     left: 15%;
                 }
             }
             .dot8 {
-                top: 300px;
-                left: 0%;
+                top: -18%;
+                right: 25%;
                 @media only screen and (max-width: 1024px) {
                     top: 44%;
                     left: 8%;
                 }
             }
             .dot9 {
-                top: 500px;
-                left: 20%;
+                top: -5%;
+                right: 5%;
+                @media only screen and (max-width: 1024px) {
+                    top: 34%;
+                    right: 0%;
+                    left: auto;
+                }
+            }
+            .dot10 {
+                top: 15%;
+                right: 17%;
+                @media only screen and (max-width: 1024px) {
+                    top: 34%;
+                    right: 0%;
+                    left: auto;
+                }
+            }
+            .dot11 {
+                top: 35%;
+                right: 7%;
+                @media only screen and (max-width: 1024px) {
+                    top: 34%;
+                    right: 0%;
+                    left: auto;
+                }
+            }
+            .dot12 {
+                top: 55%;
+                right: 15%;
                 @media only screen and (max-width: 1024px) {
                     top: 34%;
                     right: 0%;
