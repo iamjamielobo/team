@@ -35,6 +35,9 @@ html {
         z-index: 100;
         max-height: 65px;
         overflow: hidden;
+        @media only screen and (max-width: 1024px) {
+            padding: 0;
+        }
 
         .wrapper {
             display: flex;
@@ -142,6 +145,10 @@ html {
                         color: #10183C;
                         text-align: center;
                         margin-bottom: 15px;
+
+                        @media only screen and (max-width: 1024px) {
+                            margin-bottom: 30px;
+                        }
                     }
                 }
 
@@ -226,6 +233,10 @@ html {
             @media only screen and (max-width: 1300px) {
                 right: 80px;
             }
+            @media only screen and (max-width: 1024px) {
+                position: static;
+                margin-top: -15px;
+            }
             .title {
                 margin-bottom: 10px;
                 font-weight: 500;
@@ -254,8 +265,12 @@ html {
             max-width: 935px;
             // padding: 251px 0 0px;
 
+            @media only screen and (max-width: 1300px) {
+                max-width: 700px;
+            }
+
             @media only screen and (max-width: 1024px) {
-                padding: 200px 0 80px;
+                padding: 100px 0 40px;
                 max-width: 435px;
             }
 
@@ -274,6 +289,11 @@ html {
                 z-index: 10;
                 position: relative;
 
+                @media only screen and (max-width: 1300px) {
+                    font-size: 78px;
+                    line-height: 65px;
+                }
+
                 @media only screen and (max-width: 1024px) {
                     font-size: 43px;
                     line-height: 38px;
@@ -291,6 +311,15 @@ html {
             position: relative;
             z-index: 10;
             margin: 20px 0 31px;
+
+            @media only screen and (max-width: 1300px) {
+                max-width: 700px;
+            }
+
+            @media only screen and (max-width: 1024px) {
+                font-size: 17px;
+                line-height: 26px;
+            }
         }
         .abt-logos {
             z-index: 10;
@@ -478,15 +507,16 @@ html {
 
                 @media only screen and (max-width: 1024px) {
                     grid-template-columns: 1fr;
+                    padding: 70px 0;
+                    margin-top: 0;
                 }
                 .circle-col {
                     display: flex;
                     flex-direction: column;
-
                     @media only screen and (max-width: 1024px) {
                         align-items: center;
                         justify-content: center;
-                        margin-bottom: 20px;
+                        margin-bottom: 0px;
                         &:last-child {
                             margin-bottom: 0;
                         }
@@ -540,8 +570,9 @@ html {
                 bottom: 5%;
                 left: 0;
                 @media only screen and (max-width: 1024px) {
-                    top: -9%;
-                    right: 25%;
+                    top: 0;
+                    right: 11%;
+                    left: auto;
                 }
             }
             .dot2 {
@@ -549,7 +580,7 @@ html {
                 left: 10%;
                 @media only screen and (max-width: 1024px) {
                     top: 10%;
-                    right: 5%;
+                    left: 5%;
                 }
             }
             .dot3 {
@@ -558,14 +589,16 @@ html {
                 @media only screen and (max-width: 1024px) {
                     top: 92%;
                     right: 6%;
+                    left: auto;
                 }
             }
             .dot4 {
                 top: 20%;
                 left: 15%;
                 @media only screen and (max-width: 1024px) {
-                    top: 63%;
-                    right: 3%;
+                    top: 71%;
+                    right: 2%;
+                    left: auto;
                 }
             }
             .dot5 {
@@ -573,7 +606,7 @@ html {
                 left: 0%;
                 @media only screen and (max-width: 1024px) {
                     top: -11%;
-                    left: 15%;
+                    left: 23%;
                 }
             }
             .dot6 {
@@ -588,8 +621,8 @@ html {
                 top: -15%;
                 right: 40%;
                 @media only screen and (max-width: 1024px) {
-                    top: 11%;
-                    left: 15%;
+                    top: -11%;
+                    right: 31%;
                 }
             }
             .dot8 {
@@ -597,7 +630,8 @@ html {
                 right: 25%;
                 @media only screen and (max-width: 1024px) {
                     top: 44%;
-                    left: 8%;
+                    left: -1%;
+                    right: auto;
                 }
             }
             .dot9 {
@@ -719,7 +753,7 @@ html {
         background-size: cover;
         overflow: hidden;
         @media only screen and (max-width: 1024px) {
-            padding: 15px 0 0px;
+            padding: 50px 0 100px;
         }
         .wrapper {
             // display: flex;
@@ -733,10 +767,16 @@ html {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                @media only screen and (max-width: 1024px) {
+                    flex-direction: column;
+                }
             }
             .slick-dots {
                 bottom: -75px;
                 text-align: left;
+                @media only screen and (max-width: 1024px) {
+                    text-align: center;
+                }
                 .slick-active button::before {
                     opacity: 1;
                 }
@@ -769,7 +809,7 @@ html {
                     }
                     img {
                         @media only screen and (max-width: 1024px) {
-                            width: 100%;
+                            width: 70%;
                             max-width: 354px;
                             margin: 0 auto
                         }
@@ -782,6 +822,9 @@ html {
                     justify-content: center;
                     flex-direction: column;
                     margin-right: 50px;
+                    @media only screen and (max-width: 1024px) {
+                        margin-right: 0;
+                    }
                     .icon {
                         font-family: 'Press Start 2P';
                         font-weight: 400;
@@ -789,6 +832,10 @@ html {
                         line-height: 37px;
                         text-align: right;
                         margin-bottom: 50px;
+                        @media only screen and (max-width: 1024px) {
+                            width: 60px;
+                            margin-bottom: 30px;
+                        }
                     }
                     .text {
                         font-weight: 400;
@@ -798,8 +845,8 @@ html {
                         letter-spacing: -0.04em;
                         font-family: 'Archivo';
                         @media only screen and (max-width: 1024px) {
-                            font-size: 32.2829px;
-                            line-height: 35px;
+                            font-size: 24px;
+                            line-height: 32px;
                         }
                     }
                     .name {
@@ -835,8 +882,8 @@ html {
         position: relative;
 
         @media only screen and (max-width: 1024px) {
-            background: none;
-            padding: 50px 0;
+            // background: none;
+            padding: 35px 0;
         }
         .pattern {
             position: absolute;
@@ -862,8 +909,17 @@ html {
                 align-items: center;
             }
             .logo-container {
+                @media only screen and (max-width: 1024px) {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                }
                 .logo {
                     margin-bottom: 50px;
+
+                    @media only screen and (max-width: 1024px) {
+                        margin-bottom: 25px;
+                    }
                     img {
                         width: 150px;
                     }
@@ -873,6 +929,10 @@ html {
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 19px;
+
+                    @media only screen and (max-width: 1024px) {
+                        margin-top: 10px;
+                    }
                 }
             }
             .social-links {
@@ -903,6 +963,10 @@ html {
         .with-love {
             text-align: right;
             margin-top: 63px;
+
+            @media only screen and (max-width: 1024px) {
+                margin-top: 30px;
+            }
             .heartbeat {
                 img {
                     animation: beat .5s infinite alternate;
