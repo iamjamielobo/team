@@ -25,9 +25,6 @@ html {
     }
 
     .fixed-nav {
-        // position: fixed;
-        // top: 0;
-        // left: 0;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.8);
         padding: 16px 0 17px;
@@ -36,6 +33,11 @@ html {
         overflow: hidden;
         @media only screen and (max-width: 1024px) {
             padding: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 65px;
+            background-color: transparent;
         }
 
         .wrapper {
@@ -58,9 +60,9 @@ html {
                 padding: 15px 30px;
                 background-color: rgba(255, 255, 255, 0.8);
                 align-items: center;
-                position: fixed;
-                top: 0;
-                right: 0;
+                // position: fixed;
+                // top: 0;
+                // right: 0;
                 width: 100%;
             }
 
@@ -243,7 +245,8 @@ html {
                 position: static;
                 max-width: 359px;
                 width: 100%;
-                margin: 90px auto 0;
+                margin: 100px auto 0;
+                height: auto;
             }
             .title {
                 margin-bottom: 10px;
@@ -332,6 +335,10 @@ html {
         .abt-logos {
             z-index: 10;
             position: relative;
+
+            @media only screen and (max-width: 1024px) {
+                text-align: center;
+            }
         }
         .hero-img-container {
             position: relative;
