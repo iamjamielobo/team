@@ -1,57 +1,59 @@
 function initSlick() {
 
-    $(".testimonials").slick({
-        autoplaySpeed: 5000,
-        // speed: 3000,
-        // cssEase: 'linear',
-        fade: true,
-        speed: 500,
-        infinite: true,
-        cssEase: 'ease-in-out',
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        pauseOnHover: false,
-        focusOnSelect: false,
-        // nextArrow: `<img class='next-arrow' src="img/carousel/right.png">`,
-        // prevArrow: `<img class='prev-arrow' src="img/carousel/left.png">`
-        nextArrow: null,
-        prevArrow: null,
-        // responsive: [
-        //     {
-        //         breakpoint: 1380,
-        //         settings: {
-        //             slidesToShow: 2,
-        //             speed: 7000,
-        //             swipe: false,
-        //             pauseOnHover: false,
-        //             focusOnSelect: false
-        //         }
-        //     }, {
-        //         breakpoint: 1024,
-        //         settings: {
-        //             slidesToShow: 2,
-        //             speed: 7000,
-        //             swipe: false,
-        //             pauseOnHover: false,
-        //             focusOnSelect: false,
-        //         }
-        //     }, {
+    if ( $(".testimonials").length ) {
+        $(".testimonials").slick({
+            autoplaySpeed: 5000,
+            // speed: 3000,
+            // cssEase: 'linear',
+            fade: true,
+            speed: 500,
+            infinite: true,
+            cssEase: 'ease-in-out',
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            pauseOnHover: false,
+            focusOnSelect: false,
+            // nextArrow: `<img class='next-arrow' src="img/carousel/right.png">`,
+            // prevArrow: `<img class='prev-arrow' src="img/carousel/left.png">`
+            nextArrow: null,
+            prevArrow: null,
+            // responsive: [
+            //     {
+            //         breakpoint: 1380,
+            //         settings: {
+            //             slidesToShow: 2,
+            //             speed: 7000,
+            //             swipe: false,
+            //             pauseOnHover: false,
+            //             focusOnSelect: false
+            //         }
+            //     }, {
+            //         breakpoint: 1024,
+            //         settings: {
+            //             slidesToShow: 2,
+            //             speed: 7000,
+            //             swipe: false,
+            //             pauseOnHover: false,
+            //             focusOnSelect: false,
+            //         }
+            //     }, {
 
-        //         breakpoint: 600,
-        //         settings: {
-        //             slidesToShow: 1,
-        //             speed: 7000,
-        //             swipe: false,
-        //             pauseOnHover: false,
-        //             focusOnSelect: false,
-        //         }
+            //         breakpoint: 600,
+            //         settings: {
+            //             slidesToShow: 1,
+            //             speed: 7000,
+            //             swipe: false,
+            //             pauseOnHover: false,
+            //             focusOnSelect: false,
+            //         }
 
-        //     }
-        // ]
-    });
+            //     }
+            // ]
+        });
+    }
 }
 
 function scrollToHash () {
