@@ -54,19 +54,33 @@ function initSlick() {
     });
 }
 
+function scrollToHash () {
+    if ( location.pathname === '/' ) {
+
+        var secName = '';
+
+        $('html, body').animate({
+            scrollTop: $("#" + secName).offset().top,
+            easing: "linear"
+        }, 700);
+    }
+}
+
 $(document).ready(function () {
 
     initSlick();
 
-    $('.js-contact-open').click(function() {
-        $('body').addClass('_fixed');
-        $('.contact-form-modal').removeClass('_hidden');
-    })
+    // scrollToHash();
 
-    $('.cross').click(function() {
-        $('body').removeClass('_fixed');
-        $('.contact-form-modal').addClass('_hidden');
-    })
+    // $('.js-contact-open').click(function() {
+    //     $('body').addClass('_fixed');
+    //     $('.contact-form-modal').removeClass('_hidden');
+    // })
+
+    // $('.cross').click(function() {
+    //     $('body').removeClass('_fixed');
+    //     $('.contact-form-modal').addClass('_hidden');
+    // })
 
     //     if ( emailjs ) {
     //         emailjs.init("HmmtKITJrAmisKnCp");
@@ -105,11 +119,10 @@ $(document).ready(function () {
 
         $('nav li').click(function (e) {
 
-
             var $this = $(this);
             var secName = $this.data('scroll');
 
-            if ( secName === 'contact' ) {
+            if ( secName === 'contact' || secName === undefined ) {
                 return
             }
 
