@@ -256,6 +256,9 @@ html {
                 text-align: center;
                 letter-spacing: -0.01em;
                 color: #10183C;
+                @media only screen and (max-width: 1024px) {
+                    color: $white;
+                }
             }
             .banner-ad {
                 background: #FFFFFF;
