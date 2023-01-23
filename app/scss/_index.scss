@@ -1011,6 +1011,10 @@ html {
             line-height: 19px;
             margin-top: 15px;
             text-align: right;
+
+            @media only screen and (max-width: 1024px) {
+                text-align: center;
+            }
         }
     }
 }
