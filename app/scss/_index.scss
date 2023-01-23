@@ -1,6 +1,5 @@
 html {
     background-color: #10183C;
-    // scroll-behavior: smooth;
 }
 
 .body-container {
@@ -203,6 +202,13 @@ html {
                             width: 100%;
                             margin: 17px auto 0;
                             background: #10183C;
+                        }
+                        &._active {
+                            &:after {
+                                width: 100%;
+                                margin: 17px auto 0;
+                                background: #10183C;
+                            }
                         }
                     }
                 }

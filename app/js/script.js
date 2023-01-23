@@ -104,10 +104,16 @@ $(document).ready(function () {
         });
 
         $('nav li').click(function (e) {
-            e.preventDefault();
+
 
             var $this = $(this);
             var secName = $this.data('scroll');
+
+            if ( secName === 'contact' ) {
+                return
+            }
+
+            e.preventDefault();
 
             $(".hamburger").toggleClass("_active");
             $('.nav-mobile-list').toggleClass('_active');
