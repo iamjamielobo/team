@@ -235,7 +235,9 @@ html {
             }
             @media only screen and (max-width: 1024px) {
                 position: static;
-                margin-top: -15px;
+                max-width: 359px;
+                width: 100%;
+                margin: 75px auto 0;
             }
             .title {
                 margin-bottom: 10px;
