@@ -232,9 +232,11 @@ html {
             position: relative;
             @media only screen and (max-width: 1024px) {
                 display: block;
+                width: auto;
+                height: auto;
             }
         }
-        .banner-ad-container {
+        .banner-container {
             z-index: 10;
             position: absolute;
             width: 359px;
@@ -263,7 +265,7 @@ html {
                 letter-spacing: -0.01em;
                 color: $white;
             }
-            .banner-ad {
+            .banner {
                 background: #FFFFFF;
                 border: 1px solid rgba(0, 0, 0, 0.35);
                 border-radius: 10px;
@@ -491,6 +493,9 @@ html {
 
         @media only screen and (max-width: 1024px) {
             height: auto;
+            padding: 150px 0 100px;
+        }
+        @media only screen and (max-width: 600px) {
             padding: 70px 0 100px;
         }
         .bg-img-1 {
@@ -610,7 +615,7 @@ html {
                 bottom: 20%;
                 left: 10%;
                 @media only screen and (max-width: 1024px) {
-                    top: 12%;
+                    top: 7%;
                     left: 6%;
                 }
             }
@@ -644,8 +649,8 @@ html {
                 top: -5%;
                 left: 30%;
                 @media only screen and (max-width: 1024px) {
-                    top: 71%;
-                    left: 10%;
+                    top: 78%;
+                    left: 6%;
                 }
             }
             .dot7 {
@@ -696,7 +701,7 @@ html {
                 top: 55%;
                 right: 15%;
                 @media only screen and (max-width: 1024px) {
-                    top: 81%;
+                    top: 75%;
                     right: 9%;
                     left: auto;
                 }
@@ -739,10 +744,8 @@ html {
             }
 
             @media only screen and (max-width: 768px) {
-                grid-template-columns: repeat(4, 19%);
-                grid-column-gap: 8%;
-                align-items: center;
-                justify-content: center;
+                grid-template-columns: repeat(3, 30%);
+                grid-column-gap: 5%;
             }
 
             @media only screen and (max-width: 360px) {
@@ -752,6 +755,10 @@ html {
 
             .members-block {
                 margin-bottom: 70px;
+
+                @media only screen and (max-width: 768px) {
+                    max-width: 80px;
+                }
 
                 .name {
                     font-weight: 600;
@@ -765,7 +772,10 @@ html {
                 }
 
                 .logo {
-                    min-height: 41px;
+                    min-height: 51px;
+                    display: flex;
+                    align-items: center;
+                    // justify-content: center;
                     img {
                         @media only screen and (max-width: 1024px) {
                             max-width: 100%;
@@ -864,8 +874,10 @@ html {
                         text-align: right;
                         margin-bottom: 50px;
                         @media only screen and (max-width: 1024px) {
-                            width: 60px;
                             margin-bottom: 30px;
+                            img {
+                                width: 60px;
+                            }
                         }
                     }
                     .text {
