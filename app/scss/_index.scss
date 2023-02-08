@@ -496,7 +496,7 @@ html {
             padding: 150px 0 100px;
         }
         @media only screen and (max-width: 600px) {
-            padding: 70px 0 100px;
+            padding: 150px 0 100px;
         }
         .bg-img-1 {
             position: absolute;
@@ -532,19 +532,19 @@ html {
             }
             .circle-wrapper {
                 display: grid;
-                grid-template-columns: repeat(3, 25%);
-                grid-column-gap: 12.5%;
+                grid-template-columns: repeat(3,28%);
+                grid-column-gap: 8%;
                 color: $white;
-                margin-top: 150px;
+                align-items: center;
 
                 @media only screen and (max-width: 1000px) {
                     grid-template-columns: 1fr;
-                    padding: 170px 0;
+                    padding: 70px 0 200px;
                     margin-top: 0;
                 }
 
-                @media only screen and (max-width: 768px) {
-                    padding: 70px 0;
+                @media only screen and (max-width: 767px) {
+                    padding: 40px 0;
                 }
                 .circle-col {
                     display: flex;
@@ -552,10 +552,6 @@ html {
                     @media only screen and (max-width: 1024px) {
                         align-items: center;
                         justify-content: center;
-                        margin-bottom: 0px;
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
                     }
                     .title {
                         font-weight: 700;
@@ -566,6 +562,11 @@ html {
                         text-transform: capitalize;
 
                         @media only screen and (max-width: 1024px) {
+                            font-size: 32px;
+                            line-height: 1;
+                        }
+
+                        @media only screen and (max-width: 600px) {
                             font-size: 20.5px;
                             line-height: 22px;
                         }
@@ -579,6 +580,14 @@ html {
                         text-transform: capitalize;
 
                         @media only screen and (max-width: 1024px) {
+                            font-size: 12px;
+                            line-height: 1;
+                            max-width: 150px;
+                            margin: 0 auto;
+                            margin-top: 5px;
+                        }
+
+                        @media only screen and (max-width: 600px) {
                             font-size: 11.7143px;
                             line-height: 15px;
                             max-width: 150px;
@@ -606,8 +615,8 @@ html {
                 bottom: 5%;
                 left: 0;
                 @media only screen and (max-width: 1024px) {
-                    top: -11%;
-                    right: 22%;
+                    top: 2%;
+                    right: 24%;
                     left: auto;
                 }
             }
@@ -615,25 +624,25 @@ html {
                 bottom: 20%;
                 left: 10%;
                 @media only screen and (max-width: 1024px) {
-                    top: 7%;
-                    left: 6%;
+                    top: 20%;
+                    left: 11%;
                 }
             }
             .dot3 {
                 top: 40%;
                 left: 2%;
                 @media only screen and (max-width: 1024px) {
-                    top: 52%;
+                    top: -39%;
                     right: auto;
-                    left: 5%;
+                    left: 25%;
                 }
             }
             .dot4 {
                 top: 20%;
                 left: 15%;
                 @media only screen and (max-width: 1024px) {
-                    top: 92%;
-                    right: 21%;
+                    top: 80%;
+                    right: 7%;
                     left: auto;
                 }
             }
@@ -641,7 +650,7 @@ html {
                 top: 5%;
                 left: 0%;
                 @media only screen and (max-width: 1024px) {
-                    top: -10%;
+                    top: 2%;
                     left: 23%;
                 }
             }
@@ -657,7 +666,7 @@ html {
                 top: -15%;
                 right: 40%;
                 @media only screen and (max-width: 1024px) {
-                    top: -16%;
+                    top: -8%;
                     right: 46%;
                 }
             }
@@ -665,8 +674,8 @@ html {
                 top: -18%;
                 right: 25%;
                 @media only screen and (max-width: 1024px) {
-                    top: 31%;
-                    left: 4%;
+                    top: -21%;
+                    left: 12%;
                     right: auto;
                 }
             }
@@ -674,8 +683,8 @@ html {
                 top: -5%;
                 right: 5%;
                 @media only screen and (max-width: 1024px) {
-                    top: 8%;
-                    right: 4%;
+                    top: -10%;
+                    right: 6%;
                     left: auto;
                 }
             }
@@ -683,8 +692,8 @@ html {
                 top: 15%;
                 right: 17%;
                 @media only screen and (max-width: 1024px) {
-                    top: 30%;
-                    right: 4%;
+                    top: 26%;
+                    right: 11%;
                     left: auto;
                 }
             }
@@ -692,8 +701,13 @@ html {
                 top: 35%;
                 right: 7%;
                 @media only screen and (max-width: 1024px) {
-                    top: 56%;
-                    right: 3%;
+                    top: -21%;
+                    right: 26%;
+                    left: auto;
+                }
+                @media only screen and (max-width: 600px) {
+                    top: -28%;
+                    right: 26%;
                     left: auto;
                 }
             }
@@ -701,7 +715,7 @@ html {
                 top: 55%;
                 right: 15%;
                 @media only screen and (max-width: 1024px) {
-                    top: 75%;
+                    top: -36%;
                     right: 9%;
                     left: auto;
                 }
