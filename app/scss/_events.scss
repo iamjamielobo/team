@@ -305,7 +305,7 @@
                         width: 100%;
                     }
                 }
-                .title {
+                .event-title {
                     font-weight: 700;
                     font-size: 20.7059px;
                     line-height: 29px;
@@ -327,6 +327,9 @@
                         color: $black;
                         font-weight: 700;
                     }
+                }
+                &._hidden {
+                    display: none;
                 }
             }
         }

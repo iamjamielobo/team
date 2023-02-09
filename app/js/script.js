@@ -129,10 +129,21 @@ $(document).ready(function () {
 
     // scrollToHash();
 
-    // $('.js-contact-open').click(function() {
-    //     $('body').addClass('_fixed');
-    //     $('.contact-form-modal').removeClass('_hidden');
-    // })
+    $('.js-event-btns .btn').click(function() {
+        var $this = $(this);
+
+        $('.js-event-btns .btn').removeClass('_active');
+        $this.addClass('_active');
+
+        $('.event-slide').addClass('_hidden');
+
+        if ( $this.data('filter') === 'team' ) {
+            $('[data-filter-content]').removeClass('_hidden');
+        }
+        else {
+            $('.event-slide').removeClass('_hidden');
+        }
+    })
 
     // $('.cross').click(function() {
     //     $('body').removeClass('_fixed');
@@ -321,6 +332,7 @@ $(document).ready(function () {
     //             });
     //         }
     //     })
+
 });
 
 // var validateEmail = (email) => {
