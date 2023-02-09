@@ -1,7 +1,10 @@
 function initSlick() {
 
-    if ( $(".testimonials").length ) {
-        $(".testimonials").slick({
+    var $slickUno = $(".testimonials");
+    var $slickDos = $(".event-banner-slick");
+
+    if ( $slickUno.length ) {
+        $slickUno.slick({
             autoplaySpeed: 5000,
             // speed: 3000,
             // cssEase: 'linear',
@@ -20,6 +23,58 @@ function initSlick() {
             // prevArrow: `<img class='prev-arrow' src="img/carousel/left.png">`
             nextArrow: null,
             prevArrow: null,
+            // responsive: [
+            //     {
+            //         breakpoint: 1380,
+            //         settings: {
+            //             slidesToShow: 2,
+            //             speed: 7000,
+            //             swipe: false,
+            //             pauseOnHover: false,
+            //             focusOnSelect: false
+            //         }
+            //     }, {
+            //         breakpoint: 1024,
+            //         settings: {
+            //             slidesToShow: 2,
+            //             speed: 7000,
+            //             swipe: false,
+            //             pauseOnHover: false,
+            //             focusOnSelect: false,
+            //         }
+            //     }, {
+
+            //         breakpoint: 600,
+            //         settings: {
+            //             slidesToShow: 1,
+            //             speed: 7000,
+            //             swipe: false,
+            //             pauseOnHover: false,
+            //             focusOnSelect: false,
+            //         }
+
+            //     }
+            // ]
+        });
+    }
+
+    if ( $slickDos.length ) {
+        $slickDos.slick({
+            // autoplaySpeed: 5000,
+            // fade: true,
+            // speed: 500,
+            // centerMode: true,
+            infinite: false,
+            // cssEase: 'ease-in-out',
+            dots: false,
+            // infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            // autoplay: true,
+            pauseOnHover: false,
+            focusOnSelect: false,
+            nextArrow: `<span class='next-arrow-container'><img class='next-arrow' src="../../img/arrow-right.svg"></span>`,
+            prevArrow: `<span class='prev-arrow-container'><img class='prev-arrow' src="../../img/arrow-right.svg"></span>`
             // responsive: [
             //     {
             //         breakpoint: 1380,
