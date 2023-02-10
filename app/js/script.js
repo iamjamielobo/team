@@ -129,24 +129,46 @@ $(document).ready(function () {
 
     // scrollToHash();
 
-    $('#js-switch').change(function() {
+    $('#js-switch-passed').change(function() {
 
-        var $leftText = $('.toggle-text-left');
-        var $rightText = $('.toggle-text-right');
+        var $leftText = $('.passed-events .toggle-text-left');
+        var $rightText = $('.passed-events .toggle-text-right');
 
-        $('.event-slide').addClass('_hidden');
+        $('.passed-events .event-slide').addClass('_hidden');
 
         if ( this.checked ) {
             $leftText.removeClass('_active');
             $rightText.addClass('_active');
 
-            $('.event-slide').removeClass('_hidden');
+            $('.passed-events .event-slide').removeClass('_hidden');
         }
         else {
             $leftText.addClass('_active');
             $rightText.removeClass('_active');
 
-            $('[data-filter-content]').removeClass('_hidden');
+            $('.passed-events [data-filter-content]').removeClass('_hidden');
+        }
+    });
+    // scrollToHash();
+
+    $('#js-switch').change(function() {
+
+        var $leftText = $('.upcoming-events .toggle-text-left');
+        var $rightText = $('.upcoming-events .toggle-text-right');
+
+        $('.upcoming-events .event-slide').addClass('_hidden');
+
+        if ( this.checked ) {
+            $leftText.removeClass('_active');
+            $rightText.addClass('_active');
+
+            $('.upcoming-events .event-slide').removeClass('_hidden');
+        }
+        else {
+            $leftText.addClass('_active');
+            $rightText.removeClass('_active');
+
+            $('.upcoming-events [data-filter-content]').removeClass('_hidden');
         }
     });
 
