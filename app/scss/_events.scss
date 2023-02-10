@@ -292,7 +292,10 @@
 
         .event-banner-slick {
             .event-slide {
-                margin-right: 30px;
+                // margin-right: 30px;
+                a {
+                    display: block;
+                }
 
                 img {
                     width: 100%;
@@ -479,13 +482,15 @@
                 }
 
                 .location {
+                    font-weight: 600;
                     font-size: 12.587px;
                     line-height: 18px;
-                    color: rgba(0, 0, 0, 0.8);
+                    color: #86878A;
 
                     .text-bold {
                         color: $black;
                         font-weight: 700;
+                        color: rgba(0, 0, 0, 0.8);
                     }
                 }
 
