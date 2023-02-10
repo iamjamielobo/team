@@ -58,57 +58,57 @@ function initSlick() {
         });
     }
 
-    if ( $slickDos.length ) {
-        $slickDos.slick({
-            // autoplaySpeed: 5000,
-            // fade: true,
-            // speed: 500,
-            // centerMode: true,
-            infinite: false,
-            // cssEase: 'ease-in-out',
-            dots: false,
-            // infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            // autoplay: true,
-            pauseOnHover: false,
-            focusOnSelect: false,
-            nextArrow: `<span class='next-arrow-container'><img class='next-arrow' src="../../img/arrow-right.svg"></span>`,
-            prevArrow: `<span class='prev-arrow-container'><img class='prev-arrow' src="../../img/arrow-right.svg"></span>`
-            // responsive: [
-            //     {
-            //         breakpoint: 1380,
-            //         settings: {
-            //             slidesToShow: 2,
-            //             speed: 7000,
-            //             swipe: false,
-            //             pauseOnHover: false,
-            //             focusOnSelect: false
-            //         }
-            //     }, {
-            //         breakpoint: 1024,
-            //         settings: {
-            //             slidesToShow: 2,
-            //             speed: 7000,
-            //             swipe: false,
-            //             pauseOnHover: false,
-            //             focusOnSelect: false,
-            //         }
-            //     }, {
+    // if ( $slickDos.length ) {
+    //     $slickDos.slick({
+    //         // autoplaySpeed: 5000,
+    //         // fade: true,
+    //         // speed: 500,
+    //         // centerMode: true,
+    //         infinite: false,
+    //         // cssEase: 'ease-in-out',
+    //         dots: false,
+    //         // infinite: true,
+    //         slidesToShow: 1,
+    //         slidesToScroll: 1,
+    //         // autoplay: true,
+    //         pauseOnHover: false,
+    //         focusOnSelect: false,
+    //         nextArrow: `<span class='next-arrow-container'><img class='next-arrow' src="../../img/arrow-right.svg"></span>`,
+    //         prevArrow: `<span class='prev-arrow-container'><img class='prev-arrow' src="../../img/arrow-right.svg"></span>`
+    //         // responsive: [
+    //         //     {
+    //         //         breakpoint: 1380,
+    //         //         settings: {
+    //         //             slidesToShow: 2,
+    //         //             speed: 7000,
+    //         //             swipe: false,
+    //         //             pauseOnHover: false,
+    //         //             focusOnSelect: false
+    //         //         }
+    //         //     }, {
+    //         //         breakpoint: 1024,
+    //         //         settings: {
+    //         //             slidesToShow: 2,
+    //         //             speed: 7000,
+    //         //             swipe: false,
+    //         //             pauseOnHover: false,
+    //         //             focusOnSelect: false,
+    //         //         }
+    //         //     }, {
 
-            //         breakpoint: 600,
-            //         settings: {
-            //             slidesToShow: 1,
-            //             speed: 7000,
-            //             swipe: false,
-            //             pauseOnHover: false,
-            //             focusOnSelect: false,
-            //         }
+    //         //         breakpoint: 600,
+    //         //         settings: {
+    //         //             slidesToShow: 1,
+    //         //             speed: 7000,
+    //         //             swipe: false,
+    //         //             pauseOnHover: false,
+    //         //             focusOnSelect: false,
+    //         //         }
 
-            //     }
-            // ]
-        });
-    }
+    //         //     }
+    //         // ]
+    //     });
+    // }
 }
 
 function scrollToHash () {
@@ -129,21 +129,42 @@ $(document).ready(function () {
 
     // scrollToHash();
 
-    $('.js-event-btns .btn').click(function() {
-        var $this = $(this);
+    $('#js-switch').change(function() {
 
-        $('.js-event-btns .btn').removeClass('_active');
-        $this.addClass('_active');
+        var $leftText = $('.toggle-text-left');
+        var $rightText = $('.toggle-text-right');
 
         $('.event-slide').addClass('_hidden');
 
-        if ( $this.data('filter') === 'team' ) {
-            $('[data-filter-content]').removeClass('_hidden');
-        }
-        else {
+        if ( this.checked ) {
+            $leftText.removeClass('_active');
+            $rightText.addClass('_active');
+
             $('.event-slide').removeClass('_hidden');
         }
-    })
+        else {
+            $leftText.addClass('_active');
+            $rightText.removeClass('_active');
+
+            $('[data-filter-content]').removeClass('_hidden');
+        }
+    });
+
+    // $('.js-event-btns .btn').click(function() {
+    //     var $this = $(this);
+
+    //     $('.js-event-btns .btn').removeClass('_active');
+    //     $this.addClass('_active');
+
+    //     $('.event-slide').addClass('_hidden');
+
+    //     if ( $this.data('filter') === 'team' ) {
+    //         $('[data-filter-content]').removeClass('_hidden');
+    //     }
+    //     else {
+    //         $('.event-slide').removeClass('_hidden');
+    //     }
+    // })
 
     // $('.cross').click(function() {
     //     $('body').removeClass('_fixed');
