@@ -345,12 +345,23 @@
                 @media only screen and (max-width: 1024px) {
                     font-size: 24px;
                     line-height: 36px;
-                    margin-bottom: 12px;
+                    margin-bottom: 25px;
                 }
             }
 
             .bottom-banner {
                 @media only screen and (max-width: 1024px) {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .bottom-banner-btn {
+                display: none;
+                @media only screen and (max-width: 1024px) {
+                    display: block;
+                    margin-top: 25px;
                     img {
                         width: 100%;
                     }
@@ -475,6 +486,8 @@
 
                             @media only screen and (max-width: 1024px) {
                                 padding-left: 50px;
+                                padding-bottom: 20px;
+                                margin-bottom: 24px;
                             }
 
                             &::after {
