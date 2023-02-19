@@ -7,9 +7,9 @@
 <path d="M145.019 35.2997L149.572 30.7461L145.019 26.1926" stroke="white" stroke-width="1.43103" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <defs>
-<linearGradient id="paint0_linear_1142_68215" x1="83" y1="-5" x2="83" y2="66.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#895D1F"/>
-<stop offset="0.439288" stop-color="#DED6A1"/>
+<linearGradient id="paint0_linear_1142_68215" x1="166" y1="51.5" x2="-37.5" y2="2.36302e-06" gradientUnits="userSpaceOnUse">
+<stop offset="0.029548" stop-color="#895D1F"/>
+<stop offset="0.473217" stop-color="#BD9F50"/>
 <stop offset="0.941357" stop-color="#C88925"/>
 </linearGradient>
 <clipPath id="clip0_1142_68215">
