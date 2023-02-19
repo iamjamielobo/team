@@ -531,6 +531,10 @@
         }
 
         .banner-img {
+
+            @media only screen and (max-width: 1024px) {
+                margin-bottom: -2px;
+            }
             img {
                 width: 100%;
             }
