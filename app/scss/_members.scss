@@ -526,6 +526,10 @@
         background-color: #10183C;
         padding-top: 65px;
 
+        @media only screen and (max-width: 1024px) {
+            padding-top: 120px;
+        }
+
         .banner-img {
             img {
                 width: 100%;
