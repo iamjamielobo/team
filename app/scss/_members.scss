@@ -1,6 +1,10 @@
 .body-container {
     overflow: hidden;
 
+    &._members-body-container {
+        overflow: unset;
+    }
+
     // padding-top: 67px;
     .wrapper {
         max-width: 1200px;
@@ -227,11 +231,13 @@
 
     .member-hero {
         position: relative;
+
         .img {
             img {
                 width: 100%;
             }
         }
+
         .overlay-text {
             position: absolute;
             top: 0;
@@ -242,6 +248,7 @@
             align-items: center;
             justify-content: flex-start;
             color: $white;
+
             h1 {
                 font-weight: 600;
                 font-size: 36px;
@@ -249,6 +256,7 @@
                 letter-spacing: -0.01em;
                 margin-bottom: 18px;
             }
+
             h3 {
                 font-weight: 300;
                 font-size: 28px;
@@ -265,8 +273,40 @@
         grid-template-columns: 240px calc(100% - 240px - 40px);
         grid-column-gap: 40px;
         padding: 65px 0;
-       .member-details-section {
-        margin-bottom: 60px;
+
+        .nav-wrapper {
+            position: relative;
+            .nav {
+                position: sticky;
+                top: 0px;
+                .nav-container {
+                    padding: 23px 0;
+                    border-top: 1px solid rgba(0, 0, 0, 0.15);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+                    .nav-element {
+                        margin-bottom: 12px;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 18px;
+                        letter-spacing: -0.01em;
+                        color: rgba(16, 24, 60, 0.5);
+                        border-left: 1.3px solid transparent;
+                        cursor: pointer;
+                        padding-left: 10px;
+                        &:hover, &._active {
+                            border-left: 1px solid #10183C;
+                            color: #10183C;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+
+        .member-details-section {
+            margin-bottom: 60px;
+
             .sec-title {
                 font-weight: 600;
                 font-size: 30px;
@@ -274,6 +314,7 @@
                 letter-spacing: -0.01em;
                 margin-bottom: 32px;
             }
+
             .sec-content {
                 margin-bottom: 60px;
                 font-weight: 400;
@@ -286,14 +327,17 @@
                     display: grid;
                     grid-template-columns: repeat(3, 33.333333333333%);
                     margin-bottom: 60px;
+
                     .block {
                         padding: 20px 24px;
                         height: 298px;
                         display: flex;
                         align-items: flex-end;
+
                         &:nth-child(odd) {
                             background: #F7F7F7;
                         }
+
                         .text {
                             font-weight: 400;
                             font-size: 24px;
@@ -302,6 +346,7 @@
                         }
                     }
                 }
+
                 .border-text {
                     font-style: italic;
                     font-weight: 400;
@@ -312,6 +357,7 @@
                     padding: 5px 0px 5px 24px;
                     border-left: 2px solid #212D61;
                 }
+
                 .member-list {
                     font-weight: 400;
                     font-size: 18px;
@@ -319,16 +365,19 @@
                     letter-spacing: -0.01em;
                     color: #667085;
                     list-style-position: inside;
+
                     li {
                         padding-left: 30px;
                         padding-bottom: 40px;
                         margin-bottom: 30px;
                         position: relative;
                         border-bottom: 1px solid rgba(102, 112, 133, 0.25);
+
                         &:last-child {
                             border-bottom: 0;
                             padding-bottom: 0;
                         }
+
                         &::after {
                             content: '';
                             position: absolute;
@@ -340,12 +389,14 @@
                             background-color: #667085;
                         }
                     }
+
                     &.special {
 
                         li {
                             padding-left: 65px;
                             padding-bottom: 40px;
                             margin-bottom: 30px;
+
                             &::after {
                                 display: none;
                             }
@@ -363,12 +414,13 @@
                     }
                 }
             }
-       }
+        }
     }
 
     .banner-section {
         background-color: #10183C;
         padding-top: 65px;
+
         .banner-img {
             img {
                 width: 100%;
@@ -438,6 +490,7 @@
                     line-height: 17px;
                     text-transform: capitalize;
                     margin-bottom: 3px;
+
                     @media only screen and (max-width: 1024px) {
                         // display: none;
                     }
@@ -447,6 +500,7 @@
                     min-height: 51px;
                     display: flex;
                     align-items: center;
+
                     // justify-content: center;
                     img {
                         @media only screen and (max-width: 1024px) {
