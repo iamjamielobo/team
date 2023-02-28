@@ -843,14 +843,27 @@
 
 .success-modal {
     text-align: center;
+
+    @media only screen and (max-width: 768px) {
+        padding-top: 150px;
+    }
+
     .w3-container {
         padding: 38px 82px;
         border-radius: 12px;
+
+        @media only screen and (max-width: 768px) {
+            padding: 38px 22px;
+        }
     }
 
     .w3-modal-content {
         max-width: 549px;
         margin: 0 auto;
+
+        @media only screen and (max-width: 768px) {
+            width: 80%!important;
+        }
         .w3-display-topright {
             font-size: 40px;
             &:hover {
