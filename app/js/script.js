@@ -346,13 +346,13 @@ function resetForm () {
     designation.val('');
 
 
-    // fname.val('test');
-    // lname.val('test');
-    // email.val('test@test.com');
-    // pcode.val('91');
-    // contact.val('9833727721');
-    // company.val('test');
-    // designation.val('test');
+    fname.val('test');
+    lname.val('test');
+    email.val('test@test.com');
+    pcode.val('91');
+    contact.val('9833727721');
+    company.val('test');
+    designation.val('test');
 }
 
 function navHighlight() {

@@ -677,6 +677,11 @@
         max-height: 100vh;
         overflow-y: scroll;
 
+        @media only screen and (max-width: 604px) {
+            max-height: 80vh;
+            margin: 80px auto 0;
+        }
+
         .w3-display-topright {
             font-size: 40px;
             &:hover {
@@ -701,8 +706,12 @@
 }
 
 .rsvp-modal-container {
-    padding: 44px 20px 48px;
+    padding: 44px 20px 0;
     text-align: center;
+
+    @media only screen and (max-width: 768px) {
+        padding: 44px 10px 0;
+    }
 
     .modal-wrapper {
         max-width: 480px;
