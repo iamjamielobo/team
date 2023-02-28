@@ -222,10 +222,12 @@ $(document).ready(function () {
         var eventDate = modalData[2];
         var eventTime = modalData[3];
 
-        $('#js-modal-event-title').text(eventTitle);
         $('#js-eventName').val(eventTitle);
-        $('#js-modal-event-location').text(eventLocation);
-        $('#js-modal-event-date').text(eventDate);
+        $('#js-modal-event-title').text(eventTitle);
+        if ( eventLocation ) {
+            $('#js-modal-event-location').text(eventLocation + ', ');
+        }
+        $('#js-modal-event-date').text(eventDate + ', ');
         $('#js-modal-event-time').text(eventTime);
 
         console.log('===> eventTitle', eventTitle)
