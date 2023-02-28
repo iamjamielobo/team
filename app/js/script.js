@@ -334,23 +334,23 @@ function resetForm () {
     var company = $('#js-company');
     var designation = $('#js-designation');
 
-    // eventName.val('');
-    // fname.val('');
-    // lname.val('');
-    // email.val('');
-    // pcode.val('');
-    // contact.val('');
-    // company.val('');
-    // designation.val('');
+    eventName.val('');
+    fname.val('');
+    lname.val('');
+    email.val('');
+    pcode.val('');
+    contact.val('');
+    company.val('');
+    designation.val('');
 
 
-    fname.val('test');
-    lname.val('test');
-    email.val('test@test.com');
-    pcode.val('91');
-    contact.val('9833727721');
-    company.val('test');
-    designation.val('test');
+    // fname.val('test');
+    // lname.val('test');
+    // email.val('test@test.com');
+    // pcode.val('91');
+    // contact.val('9833727721');
+    // company.val('test');
+    // designation.val('test');
 }
 
 function navHighlight() {
