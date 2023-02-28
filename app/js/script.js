@@ -238,13 +238,67 @@ $(document).ready(function () {
         e.preventDefault();
 
         var form = document.getElementById('sheetdb-form');
-        var fname = $('#js-fname').val();
-        var lname = $('#js-lname').val();
-        var email = $('#js-email').val();
-        var pcode = $('#js-pcode').val();
-        var contact = $('#js-contact').val();
-        var company = $('#js-company').val();
-        var designation = $('#js-designation').val();
+
+        var fname = $('#js-fname');
+        var fnameVal = fname.val();
+        var lname = $('#js-lname');
+        var lnameVal = lname.val();
+        var email = $('#js-email');
+        var emailVal = email.val();
+        var pcode = $('#js-pcode');
+        var pcodeVal = pcode.val();
+        var contact = $('#js-contact');
+        var contactVal = contact.val();
+        var company = $('#js-company');
+        var companyVal = company.val();
+        var designation = $('#js-designation');
+        var designationVal = designation.val();
+
+        if ( fnameVal === '' ) {
+            fname.addClass('_error');
+        }
+        else {
+            fname.removeClass('_error');
+        }
+
+        if ( lnameVal === '' ) {
+            lname.addClass('_error');
+        }
+        else {
+            lname.removeClass('_error');
+        }
+
+        if ( emailVal === '' || !validateEmail(emailVal) ) {
+            email.addClass('_error');
+        }
+        else {
+            email.removeClass('_error');
+        }
+
+        if ( pcodeVal === '' || contactVal === '' ) {
+            pcode.parent('.merged-inputs').addClass('_error');
+        }
+        else {
+            pcode.parent('.merged-inputs').removeClass('_error');
+        }
+
+        if ( companyVal === '' ) {
+            company.addClass('_error');
+        }
+        else {
+            company.removeClass('_error');
+        }
+
+        if ( designationVal === '' ) {
+            designation.addClass('_error');
+        }
+        else {
+            designation.removeClass('_error');
+        }
+
+        if ( $('input').hasClass('_error') || $('.merged-inputs').hasClass('_error') ) {
+            return false
+        }
 
         console.log('===> submit clicked', new FormData(document.getElementById("sheetdb-form")))
 
@@ -263,6 +317,12 @@ $(document).ready(function () {
 $(window).scroll(function () {
     navHighlight();
 });
+
+var validateEmail = (email) => {
+    return email.match(
+        /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
 
 function resetForm () {
     var eventName = $('#js-eventName');
