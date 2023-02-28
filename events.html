@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Events: Team Mumbai</title>
+    <link rel="stylesheet" href="dist/w3.css" />
     <link rel="stylesheet" href="dist/App.css?5" />
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -83,7 +84,7 @@
                     </div> -->
                 </div>
                 <div class="upcoming-event-list">
-                    <a href="https://in.explara.com/e/ctotalkxpaytm" target="_blank" class="event-slide" data-filter-content="team">
+                    <div href="https://in.explara.com/e/ctotalkxpaytm" target="_blank" class="event-slide" data-filter-content="team" data-modal='["CTO Talk", "Loginext office, Vikhroli west Mumbai", "11th Feb, 2023", "6PM Onwards"]' onclick="document.getElementById('rsvp-modal').style.display='block'">
                         <div class="img">
                             <img src="img/upcoming-1.png" alt="">
                         </div>
@@ -92,8 +93,8 @@
                             <p><span class="text-bold">Loginext office, Vikhroli west Mumbai</span></p>
                             <p>11th Feb, 2023</p>
                         </div>
-                    </a>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScCiEowmFzpaWwyq3ATBaUhUka03nKon2JEPf_wmydZgWB3Ug/viewform" target="_blank" class="event-slide">
+                    </div>
+                    <div href="https://docs.google.com/forms/d/e/1FAIpQLScCiEowmFzpaWwyq3ATBaUhUka03nKon2JEPf_wmydZgWB3Ug/viewform" target="_blank" class="event-slide" data-modal='["SaaSBOOMi x TEAM", "Taj Lands End, Mumbai", "23rd Feb, 2023"]'>
                         <div class="img">
                             <img src="img/upcoming-2.png" alt="">
                         </div>
@@ -102,7 +103,7 @@
                             <p><span class="text-bold">Taj Lands End, Mumbai</span></p>
                             <p>23rd Feb, 2023</p>
                         </div>
-                    </a>
+                    </div>
                     <div class="event-slide">
                         <div class="img">
                             <img src="img/upcoming-3.png" alt="">
@@ -119,7 +120,7 @@
         <div class="passed-events">
             <div class="wrapper">
                 <div class="title-sec">
-                    <h2>Passed Events</h2>
+                    <h2>Past Events</h2>
                     <!-- <div class="toggle-container">
                         <span class="toggle-text-left _active">TEAM Events</span>
                         <input type="checkbox" id="js-switch-passed" />
@@ -187,6 +188,71 @@
                         By the founders, for the founders.
                     </div>
                 </footer>
+            </div>
+        </div>
+        <div id="rsvp-modal" class="w3-modal rsvp-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <span onclick="document.getElementById('rsvp-modal').style.display='none'"
+                    class="w3-button w3-display-topright">&times;</span>
+                    <div class="rsvp-modal-container">
+                        <div class="modal-wrapper">
+                            <div class="modal-title">RSVP</div>
+                            <div class="modal-sub-title">Please let us know if you will be able to attend this event!</div>
+                            <div class="event-details">
+                                <div class="event-title" id="js-modal-event-title"></div>
+                                <div class="event-location"><span id="js-modal-event-location"></span>, <span id="js-modal-event-date"></span>, <span id="js-modal-event-time"></span></div>
+                            </div>
+                            <div class="form-container">
+                                <form method="post" id="sheetdb-form" action="https://sheetdb.io/api/v1/v0kvxcj7lbhit">
+                                    <input placeholder="Event name" name="data[eventName]" id="js-eventName" type="hidden" >
+                                    <div class="form-grid">
+                                        <div class="input-container">
+                                            <input type="text" placeholder="First name" name="data[firstName]" id="js-fname">
+                                        </div>
+                                        <div class="input-container">
+                                            <input type="text" placeholder="Last name" name="data[lastName]" id="js-lname">
+                                        </div>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="text" placeholder="you@company.com" name="data[email]" id="js-email">
+                                    </div>
+                                    <div class="input-container">
+                                        <div class="merged-inputs">
+                                            <input type="text" placeholder="Code" name="data[phoneCode]" id="js-pcode" />
+                                            <input type="text" placeholder="Contact number" name="data[contactNo]" id="js-contact" />
+                                        </div>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="text" placeholder="Company name" name="data[company]" id="js-company">
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="text" placeholder="Designation" name="data[designation]" id="js-designation">
+                                    </div>
+                                    <div class="input-container">
+                                        <button id="js-submit" type="submit">Submit</button>
+                                    </div>
+                                        <!-- ID: <input name="data[id]">
+                                        Name: <input name="data[name]">
+                                        Age: <input name="data[age]">
+                                        <button type="submit">Submit</button> -->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="success-modal" class="w3-modal success-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <span onclick="document.getElementById('success-modal').style.display='none'"
+                    class="w3-button w3-display-topright">&times;</span>
+                    <div class="success-tick">
+                        <img src="img/success.svg" alt="">
+                    </div>
+                    <div class="success-msg">Thanks for registering! We'll confirm your event slot soon.</div>
+                </div>
             </div>
         </div>
     </div>

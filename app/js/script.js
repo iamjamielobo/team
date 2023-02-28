@@ -210,11 +210,88 @@ $(document).ready(function () {
             easing: "linear"
         }, 700);
     })
+
+    $('.upcoming-event-list .event-slide').click(function(e) {
+
+        resetForm();
+
+        var $this = $(this);
+        var modalData = JSON.parse($this.attr('data-modal'));
+        var eventTitle = modalData[0];
+        var eventLocation = modalData[1];
+        var eventDate = modalData[2];
+        var eventTime = modalData[3];
+
+        $('#js-modal-event-title').text(eventTitle);
+        $('#js-eventName').val(eventTitle);
+        $('#js-modal-event-location').text(eventLocation);
+        $('#js-modal-event-date').text(eventDate);
+        $('#js-modal-event-time').text(eventTime);
+
+        console.log('===> eventTitle', eventTitle)
+        console.log('===> eventLocation', eventLocation)
+        console.log('===> eventDate', eventDate)
+    })
+
+    $('#js-submit').click(function(e) {
+
+        e.preventDefault();
+
+        var form = document.getElementById('sheetdb-form');
+        var fname = $('#js-fname').val();
+        var lname = $('#js-lname').val();
+        var email = $('#js-email').val();
+        var pcode = $('#js-pcode').val();
+        var contact = $('#js-contact').val();
+        var company = $('#js-company').val();
+        var designation = $('#js-designation').val();
+
+        console.log('===> submit clicked', new FormData(document.getElementById("sheetdb-form")))
+
+        fetch(form.action, {
+            method : "POST",
+            body: new FormData(document.getElementById("sheetdb-form")),
+        }).then(
+            response => response.json()
+        ).then((html) => {
+            document.getElementById('rsvp-modal').style.display='none'
+            document.getElementById('success-modal').style.display='block'
+        });
+    })
 });
 
 $(window).scroll(function () {
     navHighlight();
 });
+
+function resetForm () {
+    var eventName = $('#js-eventName');
+    var fname = $('#js-fname');
+    var lname = $('#js-lname');
+    var email = $('#js-email');
+    var pcode = $('#js-pcode');
+    var contact = $('#js-contact');
+    var company = $('#js-company');
+    var designation = $('#js-designation');
+
+    // eventName.val('');
+    // fname.val('');
+    // lname.val('');
+    // email.val('');
+    // pcode.val('');
+    // contact.val('');
+    // company.val('');
+    // designation.val('');
+
+
+    fname.val('test');
+    lname.val('test');
+    email.val('test@test.com');
+    pcode.val('91');
+    contact.val('9833727721');
+    company.val('test');
+    designation.val('test');
+}
 
 function navHighlight() {
     var scrollTop = $(window).scrollTop();
