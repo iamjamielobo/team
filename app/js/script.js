@@ -256,6 +256,8 @@ $(document).ready(function () {
         var designation = $('#js-designation');
         var designationVal = designation.val();
 
+        console.log('===> pcodeVal', pcodeVal)
+
         if ( fnameVal === '' || !validateName(fnameVal) ) {
             fname.addClass('_error');
         }

@@ -772,7 +772,7 @@
             .input-container {
                 margin-bottom: 33px;
 
-                input {
+                input, select {
                     width: 100%;
                     border: none;
                     background-image: none;
@@ -787,6 +787,10 @@
                     &._error {
                         border: 1px solid red;
                     }
+                }
+
+                select {
+                    border: 0;
                 }
 
                 button {
