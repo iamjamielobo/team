@@ -256,14 +256,14 @@ $(document).ready(function () {
         var designation = $('#js-designation');
         var designationVal = designation.val();
 
-        if ( fnameVal === '' ) {
+        if ( fnameVal === '' || !validateName(fnameVal) ) {
             fname.addClass('_error');
         }
         else {
             fname.removeClass('_error');
         }
 
-        if ( lnameVal === '' ) {
+        if ( lnameVal === '' || !validateName(lnameVal) ) {
             lname.addClass('_error');
         }
         else {
@@ -277,21 +277,21 @@ $(document).ready(function () {
             email.removeClass('_error');
         }
 
-        if ( pcodeVal === '' || contactVal === '' ) {
+        if ( pcodeVal === '' || contactVal === '' || !validatePhone(contactVal) ) {
             pcode.parent('.merged-inputs').addClass('_error');
         }
         else {
             pcode.parent('.merged-inputs').removeClass('_error');
         }
 
-        if ( companyVal === '' ) {
+        if ( companyVal === '' || !validateName(companyVal) ) {
             company.addClass('_error');
         }
         else {
             company.removeClass('_error');
         }
 
-        if ( designationVal === '' ) {
+        if ( designationVal === '' || !validateName(designationVal) ) {
             designation.addClass('_error');
         }
         else {
@@ -323,6 +323,23 @@ $(window).scroll(function () {
 var validateEmail = (email) => {
     return email.match(
         /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
+
+var validatePhone = (phone) => {
+
+    // if ( phone.length > 6 && phone.length < 11 ) {
+    //     return false
+    // }
+
+    return phone.match(
+        /^(1\s|1|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/
+    );
+};
+
+var validateName = (text) => {
+    return text.match(
+        /^[A-Za-z ]+$/
     );
 };
 
