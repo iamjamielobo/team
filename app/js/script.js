@@ -123,6 +123,13 @@ function scrollToHash () {
     }
 }
 
+function openRsvpModal () {
+    document.getElementById('rsvp-modal').style.display='block';
+    const myTimeout = setTimeout(function() {
+        $('#js-pcode').val("91").change();
+    }, 1);
+}
+
 $(document).ready(function () {
 
     initSlick();
