@@ -323,6 +323,11 @@ $(document).ready(function () {
             document.getElementById('success-modal').style.display='block'
         });
     })
+
+    $('.faqs .faq-container .icon').click(function () {
+        $(this).toggleClass('_expanded');
+        $(this).parent('.faq-container').find('.faq-answer').slideToggle();
+    })
 });
 
 $(window).scroll(function () {
