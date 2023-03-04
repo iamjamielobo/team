@@ -839,6 +839,11 @@
                         box-shadow: none;
                     }
                 }
+                #js-submit {
+                    &._disabled {
+                        pointer-events: none;
+                    }
+                }
             }
         }
     }

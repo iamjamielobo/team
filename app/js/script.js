@@ -246,6 +246,9 @@ $(document).ready(function () {
 
         e.preventDefault();
 
+        $('#js-submit').addClass('_disabled');
+        debugger;
+
         var form = document.getElementById('sheetdb-form');
 
         var fname = $('#js-fname');
@@ -321,6 +324,7 @@ $(document).ready(function () {
         ).then((html) => {
             document.getElementById('rsvp-modal').style.display='none'
             document.getElementById('success-modal').style.display='block'
+            $('#js-submit').removeClass('_disabled');
         });
     })
 
