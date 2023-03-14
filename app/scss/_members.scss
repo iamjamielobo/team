@@ -481,7 +481,7 @@
                             }
                         }
                         .faq-wrapper {
-                            max-width: 780px;
+                            // max-width: 780px;
                             .faq-question {
                                 margin-bottom: 8px;
                                 font-weight: 500;
@@ -497,6 +497,16 @@
                                 color: #667085;
                                 &._open {
                                     display: block;
+                                }
+                            }
+                            .faq-answer-block {
+                                margin-bottom: 20px;
+                                p {
+                                    margin-bottom: 10px;
+                                }
+                                ul {
+                                    list-style-type: disc;
+                                    list-style-position: inside;
                                 }
                             }
                         }
