@@ -390,28 +390,28 @@ function resetForm () {
     // designation.val('test');
 }
 
-function navHighlight() {
-    var scrollTop = $(window).scrollTop();
+// function navHighlight() {
+//     var scrollTop = $(window).scrollTop();
 
-    $(".member-details-section").each(function () {
-        var $this = $(this);
-        var xPos = $this.position();
-        var sectionPos = xPos.top;
-        var sectionHeight = $this.height();
-        var overall = scrollTop + sectionHeight;
+//     $(".member-details-section").each(function () {
+//         var $this = $(this);
+//         var xPos = $this.position();
+//         var sectionPos = xPos.top;
+//         var sectionHeight = $this.height();
+//         var overall = scrollTop + sectionHeight;
 
-        if ((scrollTop + 20) >= sectionPos && scrollTop < overall) {
-            $this.addClass("SectionActive");
-            $this.prevAll().removeClass("SectionActive");
-        }
+//         if ((scrollTop + 20) >= sectionPos && scrollTop < overall) {
+//             $this.addClass("SectionActive");
+//             $this.prevAll().removeClass("SectionActive");
+//         }
 
-        else if (scrollTop <= overall) {
-            $this.removeClass("SectionActive");
-        }
+//         else if (scrollTop <= overall) {
+//             $this.removeClass("SectionActive");
+//         }
 
-        var xIndex = $(".SectionActive").index();
-        var accIndex = xIndex + 1;
+//         var xIndex = $(".SectionActive").index();
+//         var accIndex = xIndex + 1;
 
-        $(".nav-wrapper .nav .nav-element:nth-child(" + accIndex + ")").addClass("_active").siblings().removeClass("_active");
-    });
-}
+//         $(".nav-wrapper .nav .nav-element:nth-child(" + accIndex + ")").addClass("_active").siblings().removeClass("_active");
+//     });
+// }

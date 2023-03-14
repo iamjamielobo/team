@@ -298,13 +298,13 @@
         &._grey {
             background: rgba(16, 24, 60, 0.05);
             .member-details-section {
-                padding: 64px 0 60px;
+                padding: 64px 0 0px;
             }
         }
 
         .member-details-section {
             font-family: 'Poppins';
-            padding: 64px 0 60px;
+            padding: 64px 0 0px;
 
             @media only screen and (max-width: 1024px) {
                 margin-bottom: 0;
@@ -345,10 +345,10 @@
 
             .join-now {
                 text-align: center;
+                margin-top: 60px;
             }
 
             .sec-content {
-                margin-bottom: 60px;
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 30px;
@@ -426,6 +426,7 @@
 
                 .contact-us {
                     margin-top: 75px;
+                    padding-bottom: 100px;
                     text-align: center;
                     .contact-us-title {
                         margin-top: 32px;
